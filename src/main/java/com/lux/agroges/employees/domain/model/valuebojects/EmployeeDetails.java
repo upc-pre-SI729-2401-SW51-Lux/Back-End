@@ -17,4 +17,8 @@ public record EmployeeDetails(String workPosition, Number salary, String phone, 
         if (state == null || state.isBlank())
             throw new IllegalArgumentException("State cannot be null or empty.");
     }
+
+    public String getEmployeeDetails() {
+        return String.format("%s %s %s %s %s", workPosition, salary, phone, age, state);
+    }
 }
