@@ -5,7 +5,9 @@ import com.lux.agroges.employees.domain.model.commands.CreateEmployeeCommand;
 import com.lux.agroges.employees.domain.model.valuebojects.EmailAddress;
 import com.lux.agroges.employees.domain.services.EmployeeCommandService;
 import com.lux.agroges.employees.infrastructure.persistence.jpa.repositories.EmployeeRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EmployeeCommandServiceImpl implements EmployeeCommandService {
     private final EmployeeRepository employeeRepository;
 
