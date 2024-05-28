@@ -1,4 +1,7 @@
 package com.lux.agroges.finance.Domain.Model.Queries;
 
-public record ProfitLossByYearQuery() {
+import java.time.LocalDateTime;
+
+public record ProfitLossByYearQuery(LocalDateTime value) {
+
 }

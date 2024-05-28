@@ -1,7 +1,7 @@
 package com.lux.agroges.finance.Domain.Model.valuobjects;
 import jakarta.persistence.Embeddable;
 
-import java.util.UUID;
+
 @Embeddable
 public record ProductDetails(String productName,String productDescription) {
     public ProductDetails{

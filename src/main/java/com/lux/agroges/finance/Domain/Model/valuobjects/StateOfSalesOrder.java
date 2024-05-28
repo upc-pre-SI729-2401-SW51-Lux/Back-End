@@ -1,6 +1,6 @@
 package com.lux.agroges.finance.Domain.Model.valuobjects;
 
-public enum StateOfReceipt{
+public enum StateOfSalesOrder {
   REQUESTED,
   CONFIRMED,
   REJECTED,
