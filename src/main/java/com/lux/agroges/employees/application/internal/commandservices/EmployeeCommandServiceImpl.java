@@ -2,8 +2,7 @@ package com.lux.agroges.employees.application.internal.commandservices;
 
 import com.lux.agroges.employees.domain.model.aggregates.Employee;
 import com.lux.agroges.employees.domain.model.commands.CreateEmployeeCommand;
-import com.lux.agroges.employees.domain.model.valuebojects.EmailAddress;
-import com.lux.agroges.employees.domain.model.valuebojects.EmployeeDetails;
+import com.lux.agroges.employees.domain.model.valueobjects.EmployeeDetails;
 import com.lux.agroges.employees.domain.services.EmployeeCommandService;
 import com.lux.agroges.employees.infrastructure.persistence.jpa.repositories.EmployeeRepository;
 import org.springframework.stereotype.Service;

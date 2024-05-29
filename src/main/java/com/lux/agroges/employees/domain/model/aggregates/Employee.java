@@ -1,8 +1,8 @@
 package com.lux.agroges.employees.domain.model.aggregates;
 
-import com.lux.agroges.employees.domain.model.valuebojects.EmailAddress;
-import com.lux.agroges.employees.domain.model.valuebojects.EmployeeDetails;
-import com.lux.agroges.employees.domain.model.valuebojects.EmployeeName;
+import com.lux.agroges.employees.domain.model.valueobjects.EmailAddress;
+import com.lux.agroges.employees.domain.model.valueobjects.EmployeeDetails;
+import com.lux.agroges.employees.domain.model.valueobjects.EmployeeName;
 import jakarta.persistence.*;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

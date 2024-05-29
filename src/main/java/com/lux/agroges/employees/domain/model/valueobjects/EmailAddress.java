@@ -1,4 +1,4 @@
-package com.lux.agroges.employees.domain.model.valuebojects;
+package com.lux.agroges.employees.domain.model.valueobjects;
 
 import jakarta.validation.constraints.Email;
 

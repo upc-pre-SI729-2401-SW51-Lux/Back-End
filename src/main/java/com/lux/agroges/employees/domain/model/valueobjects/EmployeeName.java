@@ -1,4 +1,4 @@
-package com.lux.agroges.employees.domain.model.valuebojects;
+package com.lux.agroges.employees.domain.model.valueobjects;
 
 public record EmployeeName(String firstName, String lastName) {
     public EmployeeName() {

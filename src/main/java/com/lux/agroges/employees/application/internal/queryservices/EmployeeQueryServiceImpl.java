@@ -4,7 +4,7 @@ import com.lux.agroges.employees.domain.model.aggregates.Employee;
 import com.lux.agroges.employees.domain.model.queries.GetAllEmployeesQuery;
 import com.lux.agroges.employees.domain.model.queries.GetEmployeeByIdDocumentQuery;
 import com.lux.agroges.employees.domain.model.queries.GetEmployeeByNameQuery;
-import com.lux.agroges.employees.domain.model.valuebojects.EmployeeName;
+import com.lux.agroges.employees.domain.model.valueobjects.EmployeeName;
 import com.lux.agroges.employees.domain.services.EmployeeQueryService;
 import com.lux.agroges.employees.infrastructure.persistence.jpa.repositories.EmployeeRepository;
 import org.springframework.stereotype.Service;
