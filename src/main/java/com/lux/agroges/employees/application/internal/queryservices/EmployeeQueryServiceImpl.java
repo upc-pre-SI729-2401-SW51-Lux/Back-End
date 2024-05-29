@@ -2,8 +2,9 @@ package com.lux.agroges.employees.application.internal.queryservices;
 
 import com.lux.agroges.employees.domain.model.aggregates.Employee;
 import com.lux.agroges.employees.domain.model.queries.GetAllEmployeesQuery;
-import com.lux.agroges.employees.domain.model.queries.GetEmployeeByIdQuery;
+import com.lux.agroges.employees.domain.model.queries.GetEmployeeByIdDocumentQuery;
 import com.lux.agroges.employees.domain.model.queries.GetEmployeeByNameQuery;
+import com.lux.agroges.employees.domain.model.valuebojects.EmployeeName;
 import com.lux.agroges.employees.domain.services.EmployeeQueryService;
 import com.lux.agroges.employees.infrastructure.persistence.jpa.repositories.EmployeeRepository;
 import org.springframework.stereotype.Service;
@@ -25,12 +26,12 @@ public class EmployeeQueryServiceImpl implements EmployeeQueryService {
     }
 
     @Override
-    public Optional<Employee> handle(GetEmployeeByIdQuery query) {
-        return employeeRepository.findById(query.id());
+    public Optional<Employee> handle(GetEmployeeByIdDocumentQuery query) {
+        return employeeRepository.findByIdDocument(query.idDocument());
     }
 
     @Override
     public Optional<Employee> handle(GetEmployeeByNameQuery query) {
-        return employeeRepository.findByName(query.name());
+        return employeeRepository.findByName(new EmployeeName(query.name()));
     }
 }

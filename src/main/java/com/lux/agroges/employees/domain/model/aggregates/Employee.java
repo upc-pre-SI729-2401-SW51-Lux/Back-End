@@ -11,6 +11,7 @@ import org.springframework.data.domain.AbstractAggregateRoot;
 
 import java.util.Date;
 
+@Entity
 public class Employee extends AbstractAggregateRoot<Employee> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +22,14 @@ public class Employee extends AbstractAggregateRoot<Employee> {
     private EmployeeName name;
 
     @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "address", column = @Column(name = "email_address"))
+    })
     private EmailAddress email;
 
     @Embedded
     @AttributeOverrides({
+            @AttributeOverride(name = "idDocument", column = @Column(name = "id_document")),
             @AttributeOverride(name = "workPosition", column = @Column(name = "work_position")),
             @AttributeOverride(name = "salary", column = @Column(name = "salary")),
             @AttributeOverride(name = "phone", column = @Column(name = "phone")),
@@ -39,10 +44,18 @@ public class Employee extends AbstractAggregateRoot<Employee> {
     @LastModifiedDate
     private Date updatedAt;
 
-    public Employee(String firstName, String lastName, String email, String workPosition, Integer salary, String phone, Integer age, String state) {
+    public Employee(String firstName, String lastName, String email, String idDocument, String workPosition, Integer salary, String phone, Integer age, String state) {
         this.name = new EmployeeName(firstName, lastName);
         this.email = new EmailAddress(email);
-        this.details = new EmployeeDetails(workPosition, salary, phone, age, state);
+        this.details = new EmployeeDetails(idDocument, workPosition, salary, phone, age, state);
+    }
+
+    public Employee() {
+
+    }
+
+    public String getIdDocument() {
+        return details.idDocument();
     }
 
     public String getFullName() {

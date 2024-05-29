@@ -1,11 +1,13 @@
 package com.lux.agroges.employees.domain.model.valuebojects;
 
-public record EmployeeDetails(String workPosition, Integer salary, String phone, Integer age, String state) {
+public record EmployeeDetails(String idDocument, String workPosition, Integer salary, String phone, Integer age, String state) {
     public EmployeeDetails() {
-        this(null, null, null, null, null);
+        this(null,null, null, null, null, null);
     }
 
     public EmployeeDetails {
+        if (idDocument == null || idDocument.isBlank())
+            throw new IllegalArgumentException("Identification document cannot be null or empty.");
         if (workPosition == null || workPosition.isBlank())
             throw new IllegalArgumentException("Work position cannot be null or empty.");
         if (salary == null || salary.toString().isBlank())
@@ -18,7 +20,11 @@ public record EmployeeDetails(String workPosition, Integer salary, String phone,
             throw new IllegalArgumentException("State cannot be null or empty.");
     }
 
+    public String getEmployeeId(){
+        return String.format("%s", idDocument);
+    }
+
     public String getEmployeeDetails() {
-        return String.format("%s %s %s %s %s", workPosition, salary, phone, age, state);
+        return String.format("%s %s %s %s %s %s", idDocument, workPosition, salary, phone, age, state);
     }
 }
