@@ -1,4 +1,4 @@
 package com.lux.agroges.finance.Domain.Model.Commands;
 
-public record CancelOrderCommand() {
+public record CancelOrderCommand(Long salesOrderId) {
 }
