@@ -8,7 +8,7 @@ import org.springframework.data.domain.AbstractAggregateRoot;
 
 
 @Entity
-public class Area extends AbstractAggregateRoot<Area>{
+public class Area extends AbstractAggregateRoot<Area> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,9 +19,14 @@ public class Area extends AbstractAggregateRoot<Area>{
     @Getter
     @Setter
     private String area;
-    protected Area() {}
 
-    public Area(CreateAreaCommand command) {
-
-    this.area=command.area;
+    protected Area() {
     }
+
+    /**
+     public Area(CreateAreaCommand command) {
+
+     //this.area=command.area;
+     }
+     **/
+}
