@@ -1,4 +1,6 @@
 package com.lux.agroges.finance.Domain.Model.Commands;
 
-public record CreateFarmerProductCommand(String productName,String productDescription,Long Price) {
+import java.time.LocalDateTime;
+
+public record CreateFarmerProductCommand(Long productId, String money, Long amount, LocalDateTime start, LocalDateTime end) {
 }

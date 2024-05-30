@@ -1,7 +1,6 @@
 package com.lux.agroges.finance.Domain.Model.entities;
 
-import com.lux.agroges.finance.Domain.Model.aggregates.FarmerProduct;
-import com.lux.agroges.finance.Domain.Model.valuobjects.ProductDetails;
+import com.lux.agroges.finance.Domain.Model.aggregates.FarmerProductPrice;
 import com.lux.agroges.shared.domain.model.entities.AuditableModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -15,11 +14,9 @@ public class SalesOrderItem extends AuditableModel {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "sales_order_id")
+    @JoinColumn(name = "farmer_product_price_id")
     @NotNull
-    private FarmerProduct product;
-    @NotNull
-    private Long salesOrderId;
+    private FarmerProductPrice product;
 
     @ManyToOne
     @JoinColumn(name = "sales_order_item_id")
@@ -29,13 +26,13 @@ public class SalesOrderItem extends AuditableModel {
 
 
 
-    public SalesOrderItem(FarmerProduct product,Long salesOrderId, SalesOrderItem nextItem) {
+    public SalesOrderItem(FarmerProductPrice product, SalesOrderItem nextItem) {
         this.product = product;
         this.nextItem = nextItem;
-        this.salesOrderId = salesOrderId;
+
     }
     public SalesOrderItem(){
-        this.salesOrderId = 0L;
+
         this.nextItem = null;
 
     }

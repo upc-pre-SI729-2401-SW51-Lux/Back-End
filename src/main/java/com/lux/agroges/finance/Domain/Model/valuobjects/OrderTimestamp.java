@@ -11,4 +11,7 @@ public record OrderTimestamp(LocalDateTime dateTime) {
             throw new IllegalArgumentException("OrderTimestamp cannot be null");
         }
     }
+    public OrderTimestamp(){
+        this(LocalDateTime.now());
+    }
 }
