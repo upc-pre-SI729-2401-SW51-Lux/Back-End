@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(farming):finished feature" />
+    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(farming):finished feature">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_23_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_23_55__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Area.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Code.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Cost.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Localization.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Profit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Ruc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateAreaCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateCodeCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/CropId.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,15 +40,31 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Teocchii"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/upc-pre-SI729-2401-SW51-Lux/Back-End.git",
+    "accountId": "e69161b8-1772-4b3b-be7f-ad16df80b3f3"
+  }
+}]]></component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "git-widget-placeholder": "mateo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -44,6 +74,44 @@
 }]]></component>
   <component name="TaskManager">
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/mateo" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/mateo" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature(farming):finished feature" />
