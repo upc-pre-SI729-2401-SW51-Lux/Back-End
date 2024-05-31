@@ -3,6 +3,7 @@ package com.lux.agroges.employees.application.internal.queryservices;
 import com.lux.agroges.employees.domain.model.aggregates.Employee;
 import com.lux.agroges.employees.domain.model.queries.GetAllEmployeesQuery;
 import com.lux.agroges.employees.domain.model.queries.GetEmployeeByIdDocumentQuery;
+import com.lux.agroges.employees.domain.model.queries.GetEmployeeByIdQuery;
 import com.lux.agroges.employees.domain.model.queries.GetEmployeeByNameQuery;
 import com.lux.agroges.employees.domain.model.valueobjects.EmployeeName;
 import com.lux.agroges.employees.domain.services.EmployeeQueryService;
@@ -33,5 +34,10 @@ public class EmployeeQueryServiceImpl implements EmployeeQueryService {
     @Override
     public Optional<Employee> handle(GetEmployeeByNameQuery query) {
         return employeeRepository.findByName(new EmployeeName(query.name()));
+    }
+
+    @Override
+    public Optional<Employee> handle(GetEmployeeByIdQuery query) {
+        return employeeRepository.findById(query.id());
     }
 }
