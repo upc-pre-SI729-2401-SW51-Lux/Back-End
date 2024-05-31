@@ -34,7 +34,7 @@ public class Employee extends AbstractAggregateRoot<Employee> {
             @AttributeOverride(name = "salary", column = @Column(name = "salary")),
             @AttributeOverride(name = "phone", column = @Column(name = "phone")),
             @AttributeOverride(name = "age", column = @Column(name = "age")),
-            @AttributeOverride(name = "state", column = @Column(name = "state"))
+            @AttributeOverride(name = "photoUrl", column = @Column(name = "photo_url"))
     })
     private EmployeeDetails details;
 
@@ -44,10 +44,10 @@ public class Employee extends AbstractAggregateRoot<Employee> {
     @LastModifiedDate
     private Date updatedAt;
 
-    public Employee(String firstName, String lastName, String email, String idDocument, String workPosition, Integer salary, String phone, Integer age, String state) {
+    public Employee(String firstName, String lastName, String email, String idDocument, String workPosition, Integer salary, String phone, Integer age, String photoUrl) {
         this.name = new EmployeeName(firstName, lastName);
         this.email = new EmailAddress(email);
-        this.details = new EmployeeDetails(idDocument, workPosition, salary, phone, age, state);
+        this.details = new EmployeeDetails(idDocument, workPosition, salary, phone, age, photoUrl);
     }
 
     public Employee() {

@@ -14,8 +14,8 @@ public class EmployeesContextFacade {
         this.employeeQueryService = employeeQueryService;
     }
 
-    public String createEmployee(String idDocument, String firstName, String lastName, String email, String workPosition, Integer salary, String phone, Integer age, String state) {
-        var createEmployeeCommand = new CreateEmployeeCommand(idDocument, firstName, lastName, email, workPosition, salary, phone, age, state);
+    public String createEmployee(String idDocument, String firstName, String lastName, String email, String workPosition, Integer salary, String phone, Integer age, String photoUrl) {
+        var createEmployeeCommand = new CreateEmployeeCommand(idDocument, firstName, lastName, email, workPosition, salary, phone, age, photoUrl);
         var employee = employeeCommandService.handle(createEmployeeCommand);
         if (employee.isEmpty()) return null;
         return employee.get().getIdDocument();

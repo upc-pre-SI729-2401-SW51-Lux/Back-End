@@ -1,6 +1,6 @@
 package com.lux.agroges.employees.domain.model.valueobjects;
 
-public record EmployeeDetails(String idDocument, String workPosition, Integer salary, String phone, Integer age, String state) {
+public record EmployeeDetails(String idDocument, String workPosition, Integer salary, String phone, Integer age, String photoUrl) {
     public EmployeeDetails() {
         this(null,null, null, null, null, null);
     }
@@ -16,7 +16,7 @@ public record EmployeeDetails(String idDocument, String workPosition, Integer sa
             throw new IllegalArgumentException("Phone number cannot be null or empty.");
         if (age == null || age <= 0 || age.toString().isBlank())
             throw new IllegalArgumentException("Age cannot be null or negative.");
-        if (state == null || state.isBlank())
+        if (photoUrl == null || photoUrl.isBlank())
             throw new IllegalArgumentException("State cannot be null or empty.");
     }
 
@@ -25,6 +25,6 @@ public record EmployeeDetails(String idDocument, String workPosition, Integer sa
     }
 
     public String getEmployeeDetails() {
-        return String.format("%s %s %s %s %s %s", idDocument, workPosition, salary, phone, age, state);
+        return String.format("%s %s %s %s %s %s", idDocument, workPosition, salary, phone, age, photoUrl);
     }
 }
