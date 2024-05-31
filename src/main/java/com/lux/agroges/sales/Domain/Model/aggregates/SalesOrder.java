@@ -8,6 +8,7 @@ import com.lux.agroges.shared.domain.model.aggregates.AuditableAbstractAggregate
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,10 +43,10 @@ public class SalesOrder extends AuditableAbstractAggregateRoot<SalesOrder> {
         this.invoiceId = "";
         this.salesOrderItems= new ArrayList<>();
     }
-    public SalesOrder( RucFarmer ruc, OrderTimestamp orderTimestamp, String invoiceId){
+    public SalesOrder(Long ruc, LocalDateTime orderTimestamp, String invoiceId){
         this();
-        this.ruc = ruc;
-        this.orderTimestamp = orderTimestamp;
+        this.ruc = new RucFarmer(ruc);
+        this.orderTimestamp = new OrderTimestamp(orderTimestamp);
         this.invoiceId = invoiceId;
         this.salesOrderItems= new ArrayList<>();
     }

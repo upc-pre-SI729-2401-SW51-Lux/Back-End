@@ -1,4 +1,4 @@
 package com.lux.agroges.sales.Domain.Model.Commands;
 
-public record DeleteFarmerProductCommand(Long FarmerProductId) {
+public record DeleteFarmerProductCommand(Long FarmerProductPriceId) {
 }
