@@ -22,8 +22,6 @@ public class CropItem extends AuditableModel {
     private CropItem nextItem;
 
 
-    public void CropItem(CropItem id,){
-        this.nextItem=nextItem;
-
+    public void CropItem(CropItem id){
     }
 }
