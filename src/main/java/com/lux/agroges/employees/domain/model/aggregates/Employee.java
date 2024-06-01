@@ -54,6 +54,11 @@ public class Employee extends AbstractAggregateRoot<Employee> {
 
     }
 
+    public Employee updateEmployeeDetails(String idDocument, String workPosition, Integer salary, String phone, Integer age, String photoUrl) {
+        this.details = new EmployeeDetails(idDocument, workPosition, salary, phone, age, photoUrl);
+        return this;
+    }
+
     public String getIdDocument() {
         return details.idDocument();
     }
