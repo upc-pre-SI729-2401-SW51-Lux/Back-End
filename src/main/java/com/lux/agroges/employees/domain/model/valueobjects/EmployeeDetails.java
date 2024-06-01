@@ -20,6 +20,11 @@ public record EmployeeDetails(String idDocument, String workPosition, Integer sa
             throw new IllegalArgumentException("State cannot be null or empty.");
     }
 
+    public EmployeeDetails updateEmployeeDetails(String workPosition, Integer salary, String phone, Integer age, String photoUrl) {
+        var details = new EmployeeDetails(this.idDocument, workPosition, salary, phone, age, photoUrl);
+        return details;
+    }
+
     public String getEmployeeId(){
         return String.format("%s", idDocument);
     }
