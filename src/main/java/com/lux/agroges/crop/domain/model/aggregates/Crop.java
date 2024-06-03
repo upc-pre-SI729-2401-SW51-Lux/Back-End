@@ -93,6 +93,8 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
         this.stockProduct=new StockProduct();
         this.cropCost=new CropCost();
 
+
+
     }
 
 }
