@@ -17,7 +17,6 @@ public class CropItem extends AuditableModel {
 
     @ManyToOne
     @JoinColumn(name = "crop_id")
-
     @NotNull
     private CropItem nextItem;
 

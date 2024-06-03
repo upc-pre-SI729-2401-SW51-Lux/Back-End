@@ -2,6 +2,7 @@ package com.lux.agroges.crop.domain.model.aggregates;
 import com.lux.agroges.crop.domain.model.commands.CreateCropCommand;
 import com.lux.agroges.crop.domain.model.valueobjects.*;
 import com.lux.agroges.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
+import com.lux.agroges.shared.infrastructure.persistence.jpa.strategy.SnakeCasePhysicalNamingStrategy;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -19,6 +20,7 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
     @AttributeOverrides(
         {
             @AttributeOverride(name = "cropId", column = @Column(name = "crop_id"))
+
         }
 
     )
