@@ -89,6 +89,8 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
     private List<CropItem> cropItems;
     public Crop(){
         this.cropId=new CropId(0L);
+        this.cropCost=new CropCost("",0L);
+        this.cropCode=new CropCode("");
         this.cropItems = new ArrayList<>();
     }
 
