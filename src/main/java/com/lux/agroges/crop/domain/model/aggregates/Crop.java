@@ -1,11 +1,15 @@
 package com.lux.agroges.crop.domain.model.aggregates;
 import com.lux.agroges.crop.domain.model.commands.CreateCropCommand;
+import com.lux.agroges.crop.domain.model.entities.CropItem;
 import com.lux.agroges.crop.domain.model.valueobjects.*;
 import com.lux.agroges.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
 import com.lux.agroges.shared.infrastructure.persistence.jpa.strategy.SnakeCasePhysicalNamingStrategy;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Getter
@@ -71,17 +75,21 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
     private CropCost cropCost;
 
     //Constructor de crop
+//    public Crop(){
+//        this.cropId = new CropId();
+//        this.cropCode = new CropCode("");
+//        //voy a revisar porque sale error en este codigo cuando pongo () y soluciona cuando ("")
+//
+//        this.productName=new ProductName();
+//        this.cropCost=new CropCost();
+//
+//
+//    }
+    @OneToMany(mappedBy= "Product",cascade = CascadeType.ALL)
+    private List<CropItem> cropItems;
     public Crop(){
-        this.cropId = new CropId();
-        this.cropCode = new CropCode("");
-        //voy a revisar porque sale error en este codigo cuando pongo () y soluciona cuando ("")
-
-        this.productId=new ProductId();
-        this.productName=new ProductName();
-        this.stockProduct=new StockProduct();
-        this.cropCost=new CropCost();
-
-
+        this.cropId=new CropId(0L);
+        this.cropItems = new ArrayList<>();
     }
 
     public Crop(CreateCropCommand command){
