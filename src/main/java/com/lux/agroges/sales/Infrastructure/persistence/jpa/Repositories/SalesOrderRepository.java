@@ -10,6 +10,7 @@ import java.util.List;
 public interface SalesOrderRepository extends JpaRepository<SalesOrder, Long> {
     List<SalesOrder> findBySalesOrderId(Long salesOrderId);
     List<SalesOrder> findByStatus(String status);
+    List <SalesOrder> findByCustomerId (Long CustomerId);
     boolean existsById(Long salesOrderId);
 
 }

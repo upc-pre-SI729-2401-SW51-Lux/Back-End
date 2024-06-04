@@ -5,8 +5,12 @@ import com.lux.agroges.shared.domain.model.entities.AuditableModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
+import lombok.Setter;
+
+import java.math.BigDecimal;
 
 @Getter
+@Setter
 @Entity
 public class SalesOrderItem extends AuditableModel {
     @Id
@@ -23,6 +27,8 @@ public class SalesOrderItem extends AuditableModel {
 
     @NotNull
     private SalesOrderItem nextItem;
+
+
 
 
 
@@ -44,4 +50,10 @@ public class SalesOrderItem extends AuditableModel {
     public void updateNextItem(SalesOrderItem nextItem) {
         this.nextItem = nextItem;
     }
+
+
+
+
+
+
 }

@@ -80,11 +80,23 @@ public class SalesOrder extends AuditableAbstractAggregateRoot<SalesOrder> {
     }
     public void updateItem(Long itemId,SalesOrderItem salesOrderItem, FarmerProductPrice farmerProductPrice){
         System.out.println("Updating item from sales order");
+        SalesOrderItem previousItem = getPreviousItem(salesOrderItem);
+        SalesOrderItem nextItem = salesOrderItem.getNextItem();
+    if (previousItem != null) {
+        previousItem.updateNextItem(nextItem);
+    } else {
+        var firstItem = salesOrderItems.stream()
+                .filter(item -> item.getNextItem() == salesOrderItem)
+                .findFirst();
+        firstItem.ifPresent(orderItem -> orderItem.updateNextItem(nextItem));
+    }
 
         System.out.println("Item updated from sales order");
 
 
+
     }
+
 
     private SalesOrderItem getPreviousItem(SalesOrderItem salesOrderItem) {
         return salesOrderItems.stream().filter(item -> item.getNextItem() == salesOrderItem)

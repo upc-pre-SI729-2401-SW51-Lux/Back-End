@@ -9,6 +9,7 @@ import java.util.Optional;
 public interface  FarmerProductRepository extends JpaRepository<FarmerProductPrice, Long> {
     Optional<FarmerProductPrice> findByFarmerProductId(Long farmerProductId);
 
+
     boolean existsById(Long farmerProductId);
 
 }

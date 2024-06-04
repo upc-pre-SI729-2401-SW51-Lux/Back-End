@@ -1,4 +1,7 @@
 package com.lux.agroges.sales.Interfaces.REST.Resources;
 
-public record SalesOrderResource() {
+import java.time.LocalDateTime;
+
+public record SalesOrderResource(Long salesOrderId, Long ruc, LocalDateTime orderTimestamp, String invoiceId) {
+    
 }
