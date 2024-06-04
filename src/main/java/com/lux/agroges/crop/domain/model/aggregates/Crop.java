@@ -1,9 +1,9 @@
 package com.lux.agroges.crop.domain.model.aggregates;
 import com.lux.agroges.crop.domain.model.commands.CreateCropCommand;
+import com.lux.agroges.crop.domain.model.commands.CreateProductCommand;
 import com.lux.agroges.crop.domain.model.entities.CropItem;
 import com.lux.agroges.crop.domain.model.valueobjects.*;
 import com.lux.agroges.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
-import com.lux.agroges.shared.infrastructure.persistence.jpa.strategy.SnakeCasePhysicalNamingStrategy;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -92,18 +92,30 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
         this.cropCost=new CropCost("",0L);
         this.cropCode=new CropCode("");
         this.cropItems = new ArrayList<>();
+
     }
 
-    public Crop(CreateCropCommand command){
+    public Crop(Long id, String currency, Long amount, String cropCode){
+        this();
+        this.cropId=new CropId(id);
+        this.cropCost= new CropCost(currency,amount);
+        this.cropCode= new CropCode(cropCode);
+        this.cropItems = new ArrayList<>();
+
+    }
+
+    public Crop(CreateCropCommand command, CreateProductCommand productCommand){
         this();
         this.cropId = new CropId(command.cropId());
         this.cropCode = new CropCode(command.cropCode());
-        this.productId=new ProductId();
-        this.productName=new ProductName();
-        this.stockProduct=new StockProduct();
         this.cropCost=new CropCost();
+        this.cropItems= new ArrayList<>();
 
 
+    }
+    public void addCropItem(Product product, CropItem nextItem){
+        System.out.println("Adding this crop item to the list");
+        CropItem cropItem = new CropItem(product,nextItem);
 
     }
 
