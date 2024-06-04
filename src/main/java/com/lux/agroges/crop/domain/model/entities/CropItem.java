@@ -16,7 +16,7 @@ public class CropItem extends AuditableModel {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "crop_product_id")
     @NotNull
     private Product product;
 
@@ -27,8 +27,7 @@ public class CropItem extends AuditableModel {
     private CropItem nextItem;
 
 
-
-    public void CropItem(Product product, CropItem nextItem){
+    public CropItem(Product product, CropItem nextItem){
         this.product = product;
         this.nextItem=nextItem;
 

@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crop): Rearranged the structure of the value objects">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crop): Advanced the commands for the changes">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Crop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Crop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateCropCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateCropCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateProductCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/DeleteProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/DeleteProductCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/UpdateProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/UpdateProductCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/entities/CropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/entities/CropItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/CropArea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/CropCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/CropCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/ProductPrice.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,9 +117,57 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717198220008</updated>
-      <workItem from="1717198221881" duration="2521000" />
+      <workItem from="1717198221881" duration="23146000" />
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feature(crop): Implemented some of the value objects to the aggregate">
+      <option name="closed" value="true" />
+      <created>1717221455276</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717221455276</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feature(crop): Implemented more value objects to crop">
+      <option name="closed" value="true" />
+      <created>1717222149610</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717222149610</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feature(crop): Added to the list crop">
+      <option name="closed" value="true" />
+      <created>1717380696004</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717380696004</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feature(crop): Advanced the lists of crop item">
+      <option name="closed" value="true" />
+      <created>1717390056986</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717390056986</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feature(crop): Advanced the commands for the changes">
+      <option name="closed" value="true" />
+      <created>1717400046599</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717400046599</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feature(crop): Advanced the commands for the changes">
+      <option name="closed" value="true" />
+      <created>1717400321649</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717400321649</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +215,11 @@
     <MESSAGE value="feature(farming):finished feature" />
     <MESSAGE value="feature(crop): added the needed value object in order to be used by other bounded context" />
     <MESSAGE value="feature(crop): Rearranged the structure of the value objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature(crop): Rearranged the structure of the value objects" />
+    <MESSAGE value="feature(crop): Implemented some of the value objects to the aggregate" />
+    <MESSAGE value="feature(crop): Implemented more value objects to crop" />
+    <MESSAGE value="feature(crop): Added to the list crop" />
+    <MESSAGE value="feature(crop): Advanced the lists of crop item" />
+    <MESSAGE value="feature(crop): Advanced the commands for the changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature(crop): Advanced the commands for the changes" />
   </component>
 </project>

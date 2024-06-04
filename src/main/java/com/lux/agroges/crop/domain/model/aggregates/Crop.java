@@ -43,14 +43,7 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
     @AttributeOverrides({
             @AttributeOverride(name="productId",column=@Column(name="product_id")),
     })
-    private ProductId productId;
-
-    @Embedded
-    @AttributeOverrides(
-            {
-                    @AttributeOverride(name="productName",column=@Column(name="product_name")),
-            }
-    )
+    private ProductId product;
 
     //en estos override podemos meter la snake case
     private ProductName productName;
@@ -64,7 +57,6 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
     )
     private StockProduct stockProduct;
 
-
     @Embedded
     @AttributeOverrides(
             {
@@ -74,17 +66,6 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
 
     private CropCost cropCost;
 
-    //Constructor de crop
-//    public Crop(){
-//        this.cropId = new CropId();
-//        this.cropCode = new CropCode("");
-//        //voy a revisar porque sale error en este codigo cuando pongo () y soluciona cuando ("")
-//
-//        this.productName=new ProductName();
-//        this.cropCost=new CropCost();
-//
-//
-//    }
     @OneToMany(mappedBy= "Product",cascade = CascadeType.ALL)
     private List<CropItem> cropItems;
     public Crop(){
@@ -104,19 +85,52 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
 
     }
 
-    public Crop(CreateCropCommand command, CreateProductCommand productCommand){
-        this();
-        this.cropId = new CropId(command.cropId());
-        this.cropCode = new CropCode(command.cropCode());
-        this.cropCost=new CropCost();
-        this.cropItems= new ArrayList<>();
-
-
-    }
+    //METODOS
     public void addCropItem(Product product, CropItem nextItem){
-        System.out.println("Adding this crop item to the list");
+        System.out.println("Adding this crop as an item");
         CropItem cropItem = new CropItem(product,nextItem);
+        this.cropItems.add(cropItem);
+
+    }
+    public void addCropItem(Product product){
+        System.out.println("Adding to the item");
+        CropItem cropItem=new CropItem(product, null);
+        CropItem originalLastItem=null;
+        if(!cropItems.isEmpty()) {  originalLastItem=getLastCropItem();   }
+        else{
+            System.out.println("Item is empty");
+        }
+        cropItems.add(cropItem);
+        System.out.println("item added successfully to the list");
+        if(originalLastItem!=null){     originalLastItem.updateNextItem(cropItem);  }
 
     }
 
+    public void removeItem(CropItem cropItem){
+        System.out.println("Starting the removal of the item, please standby");
+        CropItem previousItem=getPreviousItem(cropItem);
+        CropItem nextItem=cropItem.getNextItem();
+        if(previousItem!=null) {    previousItem.updateNextItem(nextItem);  }
+        else {  cropItems.remove(cropItem);   }
+        System.out.println("Item removed successfully");
+
+
+    }
+
+    public void updateItem(CropItem cropItem){
+        //Implementar todavía falta
+    }
+
+
+    public CropItem getPreviousItem(CropItem cropItem){
+        return cropItems.stream().filter(item->item.getNextItem()== cropItem).findFirst().orElse(null);-
+    }
+
+    public CropItem getLastCropItem(){
+        return cropItems.stream().filter(item->item.getNextItem()==null).findFirst().orElse(null);
+    }
+
+    public boolean emptyCrop(){
+        return cropItems.isEmpty();
+    }
 }
