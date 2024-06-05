@@ -29,20 +29,18 @@ public class FarmerProductPrice extends AuditableAbstractAggregateRoot<FarmerPro
     )
     ValidityTimeFarmerProduct validityTimeFarmerProduct;
 
-    @Embedded
-    @AttributeOverrides({@AttributeOverride(name ="quantityProduct", column = @Column(name = "quantity_product"))})
-    private com.lux.agroges.sales.Domain.Model.valuobjects.quantityProduct quantityProduct;
+    private Long quantityProduct;
     public FarmerProductPrice(){
-        this.quantityProduct= new quantityProduct(0L);
+        this.quantityProduct=0L;
         this.productId = new ProductId();
         this.price = new Price();
         this.validityTimeFarmerProduct= new ValidityTimeFarmerProduct();
     }
-    public FarmerProductPrice(Long productId, String money,Long quantityProduct, Long amount, LocalDateTime start, LocalDateTime end){
+    public FarmerProductPrice(Long productId, String money, Long amount, LocalDateTime start, LocalDateTime end,Long quantityProduct){
         this();
         this.productId = new ProductId(productId);
         this.price = new Price(money,amount);
-        this.quantityProduct = new quantityProduct(quantityProduct);
+        this.quantityProduct =quantityProduct;
         this.validityTimeFarmerProduct = new ValidityTimeFarmerProduct(start,end);
     }
     public FarmerProductPrice (CreateFarmerProductCommand command){
@@ -50,16 +48,19 @@ public class FarmerProductPrice extends AuditableAbstractAggregateRoot<FarmerPro
         this.productId = new ProductId(command.productId());
         this.price = new Price(command.money(),command.amount());
         this.validityTimeFarmerProduct = new ValidityTimeFarmerProduct(command.start(),command.end());
+        this.quantityProduct = command.quantityProduct();
     }
 
     public FarmerProductPrice updateFarmerProductPriced(String money,Long quantityProduct, Long amount){
         this.price = new Price(money,amount);
-        this.quantityProduct = new quantityProduct(quantityProduct);
+        this.quantityProduct = quantityProduct;
         return this;
     }
     public FarmerProductPrice updateValidityTime(LocalDateTime start, LocalDateTime end){
         this.validityTimeFarmerProduct = new ValidityTimeFarmerProduct(start,end);
         return this;
     }
+
+
 
 }

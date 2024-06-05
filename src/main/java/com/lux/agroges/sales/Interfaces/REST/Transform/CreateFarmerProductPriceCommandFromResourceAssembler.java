@@ -5,6 +5,6 @@ import com.lux.agroges.sales.Interfaces.REST.Resources.CreateFarmerProductPriceR
 
 public class CreateFarmerProductPriceCommandFromResourceAssembler {
     public static CreateFarmerProductCommand toCommandFromResource(CreateFarmerProductPriceResource resource) {
-        return new CreateFarmerProductCommand( resource.productId(), resource.money(), resource.quantityProduct(), resource.amount(), resource.start(), resource.end())  ;
+        return new CreateFarmerProductCommand( resource.productId(), resource.money(), resource.amount(), resource.start(), resource.end(), resource.quantityProduct())  ;
     }
 }

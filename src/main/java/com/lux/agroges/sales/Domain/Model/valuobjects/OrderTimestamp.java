@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 @Embeddable
 public record OrderTimestamp(LocalDateTime dateTime) {
     public OrderTimestamp {
-        if (dateTime == null || dateTime.isAfter(LocalDateTime.now())) {
+        if (dateTime == null ) {
             throw new IllegalArgumentException("OrderTimestamp cannot be null");
         }
     }

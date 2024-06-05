@@ -5,6 +5,6 @@ import com.lux.agroges.sales.Interfaces.REST.Resources.FarmerProductPriceResourc
 
 public class FarmerProductPriceFromEntityAssembler {
     public static FarmerProductPriceResource toResourceFromEntity(FarmerProductPrice entity) {
-        return new FarmerProductPriceResource(entity.getId(), entity.getProductId().productId(), entity.getPrice().money(), entity.getPrice().amount(), entity.getValidityTimeFarmerProduct().start(), entity.getValidityTimeFarmerProduct().end(),entity.getQuantityProduct().quantityProduct());
+        return new FarmerProductPriceResource(entity.getId(), entity.getProductId().productId(), entity.getPrice().money(), entity.getPrice().amount(), entity.getValidityTimeFarmerProduct().start(), entity.getValidityTimeFarmerProduct().end(),entity.getQuantityProduct());
     }
 }

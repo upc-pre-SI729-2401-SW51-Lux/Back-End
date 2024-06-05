@@ -1,5 +1,8 @@
 package com.lux.agroges.sales.Domain.Model.valuobjects;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public record Price(String money,Long amount) {
     public Price {
         if (money == null || money.isBlank()) {

@@ -4,11 +4,14 @@ import com.lux.agroges.sales.Domain.Model.Commands.*;
 import com.lux.agroges.sales.Domain.Model.aggregates.FarmerProductPrice;
 import com.lux.agroges.sales.Domain.Model.aggregates.SalesOrder;
 import com.lux.agroges.sales.Domain.Model.entities.SalesOrderItem;
+import com.lux.agroges.sales.Domain.Model.valuobjects.InvoiceId;
 import com.lux.agroges.sales.Domain.services.SalesOrderCommandService;
 import com.lux.agroges.sales.Infrastructure.persistence.jpa.Repositories.FarmerProductRepository;
 import com.lux.agroges.sales.Infrastructure.persistence.jpa.Repositories.SalesOrderRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class SalesOrderCommandServiceImpl implements SalesOrderCommandService {
@@ -20,18 +23,18 @@ public class SalesOrderCommandServiceImpl implements SalesOrderCommandService {
     }
     @Override
     @Transactional
-    public Long handle(CreateSalesOrderCommand command) {
-        if(salesOrderRepository.existsByInvoiceId(command.invoiceId())){
+    public Optional<SalesOrder> handle(CreateSalesOrderCommand command) {
+        if(salesOrderRepository.existsByInvoiceId(new InvoiceId(command.invoiceId()))){
             throw new IllegalArgumentException("Invoice already exists");
         }
 
-    var salesOrder = new SalesOrder(command.ruc(), command.orderTimestamp(), command.invoiceId());
+    var salesOrder = new SalesOrder(command.ruc(),  command.orderTimestamp(), command.invoiceId());
     try {
         salesOrder = salesOrderRepository.save(salesOrder);
     } catch (Exception e) {
         throw new IllegalArgumentException("Error saving sales order: " + e.getMessage());
     }
-    return salesOrder.getId();
+    return Optional.of(salesOrder);
 }
 
     @Override
