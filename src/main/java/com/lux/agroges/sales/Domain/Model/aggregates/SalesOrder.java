@@ -2,6 +2,7 @@ package com.lux.agroges.sales.Domain.Model.aggregates;
 
 
 import com.lux.agroges.sales.Domain.Model.entities.SalesOrderItem;
+import com.lux.agroges.sales.Domain.Model.valuobjects.InvoiceId;
 import com.lux.agroges.sales.Domain.Model.valuobjects.OrderTimestamp;
 import com.lux.agroges.sales.Domain.Model.valuobjects.RucFarmer;
 import com.lux.agroges.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
@@ -15,9 +16,6 @@ import java.util.List;
 @Getter
 @Entity
 public class SalesOrder extends AuditableAbstractAggregateRoot<SalesOrder> {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     @Embedded
     @AttributeOverrides(
@@ -31,23 +29,22 @@ public class SalesOrder extends AuditableAbstractAggregateRoot<SalesOrder> {
     private OrderTimestamp orderTimestamp;
     @Embedded
     @AttributeOverrides(
-            {@AttributeOverride(name= "value", column =@Column(name="invoice_id"))}
+            {@AttributeOverride(name= "invoice", column =@Column(name="invoice_id"))}
     )
-    private String invoiceId;
-
-    @OneToMany(mappedBy  = "FarmerProductPrice", cascade = CascadeType.ALL)
+    private InvoiceId invoiceId;
+    @OneToMany(cascade = CascadeType.ALL)
     private List<SalesOrderItem> salesOrderItems;
     public SalesOrder(){
         this.orderTimestamp = new OrderTimestamp();
         this.ruc= new RucFarmer(0L);
-        this.invoiceId = "";
+        this.invoiceId = new InvoiceId("");
         this.salesOrderItems= new ArrayList<>();
     }
     public SalesOrder(Long ruc, LocalDateTime orderTimestamp, String invoiceId){
         this();
         this.ruc = new RucFarmer(ruc);
         this.orderTimestamp = new OrderTimestamp(orderTimestamp);
-        this.invoiceId = invoiceId;
+        this.invoiceId = new InvoiceId(invoiceId);
         this.salesOrderItems= new ArrayList<>();
     }
     public void addItem( FarmerProductPrice farmerProductPrice,SalesOrderItem nextItem ){

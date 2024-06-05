@@ -9,7 +9,7 @@ import com.lux.agroges.sales.Domain.Model.aggregates.FarmerProductPrice;
 import java.util.Optional;
 
 public interface FarmerProductCommandService {
-    Long handle(CreateFarmerProductCommand command);
+    Optional<FarmerProductPrice> handle(CreateFarmerProductCommand command);
     Optional<FarmerProductPrice> handle(UpdateFarmerProductCommand command);
     void handle(DeleteFarmerProductCommand command);
 

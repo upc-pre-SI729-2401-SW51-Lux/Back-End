@@ -2,7 +2,7 @@ package com.lux.agroges.sales.Domain.Model.aggregates;
 import com.lux.agroges.sales.Domain.Model.Commands.CreateFarmerProductCommand;
 import com.lux.agroges.sales.Domain.Model.valuobjects.Price;
 import com.lux.agroges.sales.Domain.Model.valuobjects.ProductId;
-
+import jakarta.persistence.Id;
 import com.lux.agroges.sales.Domain.Model.valuobjects.quantityProduct;
 import com.lux.agroges.sales.Domain.Model.valuobjects.ValidityTimeFarmerProduct;
 import com.lux.agroges.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
@@ -14,14 +14,8 @@ import java.time.LocalDateTime;
 @Getter
 @Entity
 public class FarmerProductPrice extends AuditableAbstractAggregateRoot<FarmerProductPrice> {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
     @Embedded
-    @AttributeOverrides(
-            {@AttributeOverride(name= "productId", column =@Column(name="product_id")),
-                         }
-    )
     private ProductId productId;
     @Embedded
     @AttributeOverrides(
@@ -39,7 +33,7 @@ public class FarmerProductPrice extends AuditableAbstractAggregateRoot<FarmerPro
     @AttributeOverrides({@AttributeOverride(name ="quantityProduct", column = @Column(name = "quantity_product"))})
     private com.lux.agroges.sales.Domain.Model.valuobjects.quantityProduct quantityProduct;
     public FarmerProductPrice(){
-
+        this.quantityProduct= new quantityProduct(0L);
         this.productId = new ProductId();
         this.price = new Price();
         this.validityTimeFarmerProduct= new ValidityTimeFarmerProduct();

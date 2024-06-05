@@ -1,11 +1,11 @@
 package com.lux.agroges.sales.Domain.Model.valuobjects;
 
-public record Price(String money,Long pricedValue) {
+public record Price(String money,Long amount) {
     public Price {
         if (money == null || money.isBlank()) {
             throw new IllegalArgumentException("Money cannot be null or empty");
         }
-        if (pricedValue == null || pricedValue < 0) {
+        if (amount == null || amount < 0) {
             throw new IllegalArgumentException("Price value cannot be null or negative");
         }
     }

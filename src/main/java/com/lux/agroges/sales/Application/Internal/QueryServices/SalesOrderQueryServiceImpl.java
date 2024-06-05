@@ -6,10 +6,11 @@ import com.lux.agroges.sales.Domain.Model.Queries.SalesOrdersByCustomerIdQuery;
 import com.lux.agroges.sales.Domain.Model.aggregates.SalesOrder;
 import com.lux.agroges.sales.Domain.services.SalesOrderQueryService;
 import com.lux.agroges.sales.Infrastructure.persistence.jpa.Repositories.SalesOrderRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class SalesOrderQueryServiceImpl implements SalesOrderQueryService {
     private final SalesOrderRepository salesOrderRepository;
 
@@ -29,6 +30,6 @@ public class SalesOrderQueryServiceImpl implements SalesOrderQueryService {
 
     @Override
     public List<SalesOrder> handle(SalesOrdersByCustomerIdQuery query) {
-        return salesOrderRepository.findByCustomerId(query.ruc());
+        return salesOrderRepository.findByRuc(query.ruc());
     }
 }

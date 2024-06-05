@@ -21,9 +21,10 @@ public class SalesOrderCommandServiceImpl implements SalesOrderCommandService {
     @Override
     @Transactional
     public Long handle(CreateSalesOrderCommand command) {
-    if (salesOrderRepository.existsById(command.salesOrderId())) {
-        throw new IllegalArgumentException("Sales Order already exists");
-    }
+        if(salesOrderRepository.existsByInvoiceId(command.invoiceId())){
+            throw new IllegalArgumentException("Invoice already exists");
+        }
+
     var salesOrder = new SalesOrder(command.ruc(), command.orderTimestamp(), command.invoiceId());
     try {
         salesOrder = salesOrderRepository.save(salesOrder);
@@ -46,10 +47,10 @@ public class SalesOrderCommandServiceImpl implements SalesOrderCommandService {
 
 
     SalesOrderItem itemToUpdate = salesOrder.getSalesOrderItems().stream()
-        .filter(item -> item.getProduct().getId().equals(command.FarmerProductId()))
+        .filter(item -> item.getFarmerProductPrice().getId().equals(command.FarmerProductId()))
         .findFirst()
         .orElseThrow(() -> new IllegalArgumentException("Sales Order Item not found"));
-    itemToUpdate.setProduct(updatedProductPrice);
+    itemToUpdate.setFarmerProductPrice(updatedProductPrice);
     salesOrderRepository.save(salesOrder);
 
     }
@@ -84,7 +85,7 @@ public class SalesOrderCommandServiceImpl implements SalesOrderCommandService {
     FarmerProductPrice removeProductPrice = farmerProductRepository.findById(command.farmerProductPriceId())
         .orElseThrow(() -> new IllegalArgumentException("Farmer Product Price not found"));
     SalesOrderItem itemToRemove = salesOrder.getSalesOrderItems().stream()
-        .filter(item -> item.getProduct().equals(removeProductPrice))
+        .filter(item -> item.getFarmerProductPrice().equals(removeProductPrice))
         .findFirst()
         .orElseThrow(() -> new IllegalArgumentException("Sales Order Item not found"));
     salesOrder.removeItem(itemToRemove);

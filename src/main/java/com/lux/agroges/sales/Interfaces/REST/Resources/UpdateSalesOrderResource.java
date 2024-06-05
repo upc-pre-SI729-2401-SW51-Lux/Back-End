@@ -1,4 +1,7 @@
 package com.lux.agroges.sales.Interfaces.REST.Resources;
 
-public record UpdateSalesOrderResource(Long FarmerProductId, String StateOfSalesOrder) {
+import java.time.LocalDateTime;
+import java.util.List;
+
+public record UpdateSalesOrderResource(Long SalesOrderId,Long FarmerProductId, String StateOfSalesOrder) {
 }

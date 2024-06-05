@@ -8,9 +8,9 @@ import java.util.List;
 
 @Repository
 public interface SalesOrderRepository extends JpaRepository<SalesOrder, Long> {
-    List<SalesOrder> findBySalesOrderId(Long salesOrderId);
-    List<SalesOrder> findByStatus(String status);
-    List <SalesOrder> findByCustomerId (Long CustomerId);
-    boolean existsById(Long salesOrderId);
+
+    List <SalesOrder> findByRuc (Long ruc);
+
+    boolean existsByInvoiceId(String invoiceId);
 
 }

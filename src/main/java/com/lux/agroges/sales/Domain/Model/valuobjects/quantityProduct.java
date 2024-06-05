@@ -2,9 +2,12 @@ package com.lux.agroges.sales.Domain.Model.valuobjects;
 import jakarta.persistence.Embeddable;
 
 @Embeddable
-public record quantityProduct(Long quantity) {
+public record quantityProduct(Long quantityProduct) {
+    public quantityProduct(){
+        this(0L);
+    }
     public quantityProduct {
-        if (quantity == null || quantity < 0) {
+        if (quantityProduct == null || quantityProduct < 0) {
             throw new IllegalArgumentException("quantityProduct cannot be null");
         }
     }

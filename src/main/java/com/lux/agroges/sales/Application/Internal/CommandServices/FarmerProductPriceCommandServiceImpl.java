@@ -17,8 +17,8 @@ public class FarmerProductPriceCommandServiceImpl implements FarmerProductComman
         this.farmerProductRepository = farmerProductRepository;
     }
     @Override
-    public Long handle(CreateFarmerProductCommand command) {
-        if(farmerProductRepository.existsById(command.FarmerProductId())){
+    public Optional<FarmerProductPrice> handle(CreateFarmerProductCommand command) {
+        if(farmerProductRepository.existsById(command.productId())){
             throw new IllegalArgumentException("Farmer Product already exists");
         }
         var farmerProduct = new FarmerProductPrice(command);
@@ -28,7 +28,7 @@ public class FarmerProductPriceCommandServiceImpl implements FarmerProductComman
         } catch (Exception e) {
             throw new IllegalArgumentException("Error saving farmer product: "+ e.getMessage());
         }
-        return farmerProduct.getId();
+        return Optional.of(farmerProduct);
     }
     @Override
     public Optional<FarmerProductPrice> handle(UpdateFarmerProductCommand command) {

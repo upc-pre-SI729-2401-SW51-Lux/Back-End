@@ -7,8 +7,6 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.math.BigDecimal;
-
 @Getter
 @Setter
 @Entity
@@ -20,11 +18,10 @@ public class SalesOrderItem extends AuditableModel {
     @ManyToOne
     @JoinColumn(name = "farmer_product_price_id")
     @NotNull
-    private FarmerProductPrice product;
+    private FarmerProductPrice farmerProductPrice;
 
     @ManyToOne
-    @JoinColumn(name = "sales_order_item_id")
-
+    @JoinColumn(name = "next_item_id")
     @NotNull
     private SalesOrderItem nextItem;
 
@@ -32,8 +29,8 @@ public class SalesOrderItem extends AuditableModel {
 
 
 
-    public SalesOrderItem(FarmerProductPrice product, SalesOrderItem nextItem) {
-        this.product = product;
+    public SalesOrderItem(FarmerProductPrice farmerProductPrice, SalesOrderItem nextItem) {
+        this.farmerProductPrice = farmerProductPrice;
         this.nextItem = nextItem;
 
     }
@@ -42,7 +39,7 @@ public class SalesOrderItem extends AuditableModel {
         this.nextItem = null;
 
     }
-    public void SalesOrderItem(SalesOrderItem nextItem){;
+    public void SalesOrderItem(SalesOrderItem nextItem){
         this.nextItem = nextItem;
     }
 

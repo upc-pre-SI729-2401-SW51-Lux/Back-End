@@ -6,10 +6,11 @@ import com.lux.agroges.sales.Domain.Model.aggregates.FarmerProductPrice;
 import com.lux.agroges.sales.Domain.Model.entities.SalesOrderItem;
 import com.lux.agroges.sales.Domain.services.FarmerProductQueryService;
 import com.lux.agroges.sales.Infrastructure.persistence.jpa.Repositories.FarmerProductRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class FarmerProductPriceQueryServiceImpl  implements FarmerProductQueryService {
     private final FarmerProductRepository farmerProductRepository;
 
