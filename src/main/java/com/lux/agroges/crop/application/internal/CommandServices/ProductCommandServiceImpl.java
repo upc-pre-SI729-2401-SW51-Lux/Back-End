@@ -1,4 +1,4 @@
-package com.lux.agroges.crop.application.internal;
+package com.lux.agroges.crop.application.internal.CommandServices;
 
 
 import com.lux.agroges.crop.Domain.Model.aggregates.Product;
