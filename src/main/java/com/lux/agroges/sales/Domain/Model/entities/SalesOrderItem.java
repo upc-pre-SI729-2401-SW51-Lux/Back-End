@@ -35,12 +35,14 @@ public class SalesOrderItem extends AuditableModel {
         this.farmerProductPrice = farmerProductPrice;
         this.nextItem = nextItem;
 
+
     }
     public SalesOrderItem(){
 
         this.nextItem = null;
 
     }
+
 
 
     public void updateNextItem(SalesOrderItem nextItem) {

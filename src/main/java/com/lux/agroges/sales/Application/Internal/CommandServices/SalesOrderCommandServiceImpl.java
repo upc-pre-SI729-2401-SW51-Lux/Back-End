@@ -11,6 +11,7 @@ import com.lux.agroges.sales.Infrastructure.persistence.jpa.Repositories.SalesOr
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -75,9 +76,8 @@ var salesOrderOptional = salesOrderRepository.findById(command.salesOrderId());
     try {
         var salesOrder = salesOrderOptional.get();
         var farmerProduct = farmerProductOptional.get();
-
-
         salesOrder.addItem(farmerProduct);
+        salesOrder.getLastItemSalesOrder().setSalesOrder(salesOrder);
         salesOrderRepository.save(salesOrder);
     } catch (Exception e) {
         throw new IllegalArgumentException("Error saving sales order: " + e.getMessage());
@@ -97,4 +97,8 @@ var salesOrderOptional = salesOrderRepository.findById(command.salesOrderId());
     salesOrder.removeItem(itemToRemove);
     salesOrderRepository.save(salesOrder);
     }
+
+
+
+
 }
