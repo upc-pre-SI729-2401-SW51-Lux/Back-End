@@ -3,6 +3,7 @@ package com.lux.agroges.sales.Domain.services;
 import com.lux.agroges.sales.Domain.Model.Queries.GetAllFarmerProductPriceQuery;
 import com.lux.agroges.sales.Domain.Model.Queries.GetFarmerProductByIdQuery;
 
+
 import com.lux.agroges.sales.Domain.Model.aggregates.FarmerProductPrice;
 
 

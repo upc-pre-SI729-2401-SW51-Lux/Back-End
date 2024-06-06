@@ -32,7 +32,7 @@ public class SalesOrder extends AuditableAbstractAggregateRoot<SalesOrder> {
             {@AttributeOverride(name= "invoice", column =@Column(name="invoice_id"))}
     )
     private InvoiceId invoiceId;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "salesOrder", cascade = CascadeType.ALL)
     private List<SalesOrderItem> salesOrderItems;
     public SalesOrder(){
         this.orderTimestamp = new OrderTimestamp();
@@ -48,8 +48,8 @@ public class SalesOrder extends AuditableAbstractAggregateRoot<SalesOrder> {
         this.salesOrderItems= new ArrayList<>();
     }
     public void addItem( FarmerProductPrice farmerProductPrice,SalesOrderItem nextItem ){
-        System.out.println("Adding item to sales order");
-        SalesOrderItem salesOrderItem = new SalesOrderItem(farmerProductPrice,nextItem);
+      System.out.println("Adding item to sales order");
+        SalesOrderItem salesOrderItem = new SalesOrderItem(farmerProductPrice, nextItem);
         this.salesOrderItems.add(salesOrderItem);
 
     }
@@ -66,6 +66,11 @@ public class SalesOrder extends AuditableAbstractAggregateRoot<SalesOrder> {
         if(originalLastItem != null) originalLastItem.updateNextItem(salesOrderItem);
 
     }
+    public void addItem(FarmerProductPrice farmerProductPrice, Long salesOrderItemId){
+         SalesOrderItem nextItem= getSalesOrderItemById(salesOrderItemId);
+         addItem(farmerProductPrice,nextItem);
+
+     }
 
     public void removeItem(SalesOrderItem salesOrderItem){
         System.out.println("Removing item from sales order");
@@ -93,6 +98,10 @@ public class SalesOrder extends AuditableAbstractAggregateRoot<SalesOrder> {
 
 
     }
+    private SalesOrderItem getSalesOrderItemById(Long itemId){
+        return salesOrderItems.stream().filter(item -> item.getId().equals(itemId))
+                .findFirst().orElse(null);
+    }
 
 
     private SalesOrderItem getPreviousItem(SalesOrderItem salesOrderItem) {
@@ -104,6 +113,12 @@ public class SalesOrder extends AuditableAbstractAggregateRoot<SalesOrder> {
     public  SalesOrderItem getLastItemSalesOrder(){
         return salesOrderItems.stream().filter(item -> item.getNextItem() == null)
                 .findFirst().orElse(null);
+    }
+    public SalesOrder updateSalesOrder(Long ruc, LocalDateTime orderTimestamp, String invoiceId){
+        this.ruc = new RucFarmer(ruc);
+        this.orderTimestamp = new OrderTimestamp(orderTimestamp);
+        this.invoiceId = new InvoiceId(invoiceId);
+        return this;
     }
     public boolean isEmpty() {
         return salesOrderItems.isEmpty();

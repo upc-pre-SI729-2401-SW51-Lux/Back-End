@@ -7,9 +7,10 @@ import java.util.Optional;
 
 public interface SalesOrderCommandService {
     Optional<SalesOrder> handle(CreateSalesOrderCommand command);
-    void handle(UpdateSalesOrderCommand command);
+    Optional<SalesOrder> handle(UpdateSalesOrderCommand command);
     void handle(CancelSalesOrderCommand command);
     void handle(AddFarmerProductToSalesOrderCommand command);
     void handle(RemoveProductFromSalesOrderCommand command);
+
 
 }

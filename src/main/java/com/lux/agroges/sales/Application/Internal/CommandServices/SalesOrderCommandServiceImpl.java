@@ -39,22 +39,20 @@ public class SalesOrderCommandServiceImpl implements SalesOrderCommandService {
 
     @Override
     @Transactional
-    public void handle(UpdateSalesOrderCommand command) {
+    public Optional<SalesOrder>  handle(UpdateSalesOrderCommand command) {
 
-    SalesOrder salesOrder = salesOrderRepository.findById(command.SalesOrderId())
-        .orElseThrow(() -> new IllegalArgumentException("Sales Order not found"));
+        var result= salesOrderRepository.findById(command.SalesOrderId());
+        if(result.isEmpty())
+            throw new IllegalArgumentException("Sales Order not found");
+        var salesOrderToUpdate = result.get();
+        try {
+            var salesOrderUpdate = salesOrderRepository.save(salesOrderToUpdate.updateSalesOrder(command.ruc(), command.orderTimestamp(), command.invoiceId()));
+            return Optional.of(salesOrderUpdate);
+        } catch (Exception e){
+            throw new IllegalArgumentException("Error updating sales order: " + e.getMessage());
 
+        }
 
-    FarmerProductPrice updatedProductPrice = farmerProductRepository.findById(command.FarmerProductId())
-        .orElseThrow(() -> new IllegalArgumentException("Farmer Product Price not found"));
-
-
-    SalesOrderItem itemToUpdate = salesOrder.getSalesOrderItems().stream()
-        .filter(item -> item.getFarmerProductPrice().getId().equals(command.FarmerProductId()))
-        .findFirst()
-        .orElseThrow(() -> new IllegalArgumentException("Sales Order Item not found"));
-    itemToUpdate.setFarmerProductPrice(updatedProductPrice);
-    salesOrderRepository.save(salesOrder);
 
     }
 
@@ -67,19 +65,24 @@ public class SalesOrderCommandServiceImpl implements SalesOrderCommandService {
 
     @Override
     public void handle(AddFarmerProductToSalesOrderCommand command) {
-    SalesOrder salesOrder = salesOrderRepository.findById(command.salesOrderId())
-            .orElseThrow(() -> new IllegalArgumentException("Sales Order not found"));
+var salesOrderOptional = salesOrderRepository.findById(command.salesOrderId());
+    var farmerProductOptional = farmerProductRepository.findById(command.farmerProductPriceId());
 
-    var Product = farmerProductRepository.findById(command.farmerProductPriceId());
-    if (Product.isPresent()){
-            FarmerProductPrice farmerProductPrice = Product.get();
-            SalesOrderItem salesOrderItem = new SalesOrderItem(farmerProductPrice, null);
-            salesOrder.addItem(farmerProductPrice, salesOrderItem);
-            salesOrderRepository.save(salesOrder);
+    if(salesOrderOptional.isEmpty() || farmerProductOptional.isEmpty()) {
+        throw new IllegalArgumentException("Sales Order or Farmer Product not found");
     }
-    else {
-        throw new IllegalArgumentException("FarmerProductPrice not found");
+
+    try {
+        var salesOrder = salesOrderOptional.get();
+        var farmerProduct = farmerProductOptional.get();
+
+
+        salesOrder.addItem(farmerProduct);
+        salesOrderRepository.save(salesOrder);
+    } catch (Exception e) {
+        throw new IllegalArgumentException("Error saving sales order: " + e.getMessage());
     }
+
     }
     @Override
     public void handle(RemoveProductFromSalesOrderCommand command) {

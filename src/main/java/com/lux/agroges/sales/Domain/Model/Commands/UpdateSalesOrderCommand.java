@@ -1,4 +1,6 @@
 package com.lux.agroges.sales.Domain.Model.Commands;
 
-public record UpdateSalesOrderCommand(Long SalesOrderId,Long FarmerProductId, String StateOfSalesOrder ) {
+import java.time.LocalDateTime;
+
+public record UpdateSalesOrderCommand(Long SalesOrderId, Long ruc, LocalDateTime orderTimestamp, String invoiceId ) {
 }
