@@ -4,16 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crop): Advanced the commands for the changes">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Crop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Crop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateCropCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateCropCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateProductCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/DeleteProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/DeleteProductCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/UpdateProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/UpdateProductCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/entities/CropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/entities/CropItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/CropCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/CropCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/ProductPrice.java" beforeDir="false" />
+    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crop):Application layer finished">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/DeleteCropCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/UpdateCropCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/CropCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/ProductCommandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Infrastructure/persistance/jpa/Repositories/CropRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Infrastructure/persistance/jpa/Repositories/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/CropController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/CropCommandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/ProductCommandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Crop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/aggregates/Crop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/aggregates/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/aggregates/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateCropCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/CreateCropCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/CreateProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/CreateProductCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/DeleteProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/DeleteProductCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/commands/UpdateProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/UpdateProductCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/entities/CropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/entities/CropItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/queries/GetAllCropQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetAllCropQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/queries/GetCropByIdQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetCropByIdQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/CropCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/CropCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/CropCost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/CropCost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/CropId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/CropId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/ProductId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/ProductId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/ProductName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/ProductName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/domain/model/valueobjects/StockProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/StockProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/model/aggregates/AuditableAbstractAggregateRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/Model/aggregates/AuditableAbstractAggregateRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/model/entities/AuditableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/Model/entities/AuditableModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +46,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,6 +109,16 @@
     ]
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="AgrogesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="agroges" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lux.agroges.AgrogesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -117,7 +151,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717198220008</updated>
-      <workItem from="1717198221881" duration="23146000" />
+      <workItem from="1717198221881" duration="33224000" />
+      <workItem from="1717602428430" duration="19638000" />
     </task>
     <task id="LOCAL-00003" summary="feature(crop): Implemented some of the value objects to the aggregate">
       <option name="closed" value="true" />
@@ -167,7 +202,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717400321649</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feature(crop): Bounded context conflicts dealt with">
+      <option name="closed" value="true" />
+      <created>1717480481334</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717480481334</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feature(crop): Domain layer done">
+      <option name="closed" value="true" />
+      <created>1717508366756</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717508366757</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +271,10 @@
     <MESSAGE value="feature(crop): Added to the list crop" />
     <MESSAGE value="feature(crop): Advanced the lists of crop item" />
     <MESSAGE value="feature(crop): Advanced the commands for the changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature(crop): Advanced the commands for the changes" />
+    <MESSAGE value="feature(crop): Bounded context conflicts dealt with" />
+    <MESSAGE value="feature(crop): Domain layer done" />
+    <MESSAGE value="feature(crop): Typo fixed" />
+    <MESSAGE value="feature(crop):Application layer finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature(crop):Application layer finished" />
   </component>
 </project>
