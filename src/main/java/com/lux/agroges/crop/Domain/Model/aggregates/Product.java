@@ -41,7 +41,7 @@ public class Product extends AuditableAbstractAggregateRoot<Product> {
 
     public Product() {
         this.productId = new ProductId();
-        this.productName = new ProductName();
+        this.productName = new ProductName("A");
         this.stockProduct = new StockProduct();
     }
 
