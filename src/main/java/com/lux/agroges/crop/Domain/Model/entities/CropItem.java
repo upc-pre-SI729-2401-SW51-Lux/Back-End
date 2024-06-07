@@ -1,5 +1,6 @@
 package com.lux.agroges.crop.Domain.Model.entities;
 
+import com.lux.agroges.crop.Domain.Model.aggregates.Crop;
 import com.lux.agroges.crop.Domain.Model.aggregates.Product;
 import com.lux.agroges.shared.domain.Model.entities.AuditableModel;
 import jakarta.persistence.*;
@@ -22,9 +23,14 @@ public class CropItem extends AuditableModel {
 
 
     @ManyToOne
-    @JoinColumn(name = "crop_id")
+    @JoinColumn(name = "next_item_id")
     @NotNull
     private CropItem nextItem;
+
+    @ManyToOne
+    @JoinColumn(name="crop_id")
+    @NotNull
+    private Crop crop;
 
 
     public CropItem(Product product, CropItem nextItem){

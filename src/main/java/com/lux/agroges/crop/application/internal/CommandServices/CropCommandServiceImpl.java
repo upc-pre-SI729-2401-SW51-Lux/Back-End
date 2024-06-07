@@ -1,6 +1,7 @@
 package com.lux.agroges.crop.application.internal.CommandServices;
 
 import com.lux.agroges.crop.Domain.Model.aggregates.Crop;
+import com.lux.agroges.crop.Domain.Model.commands.AddProductToCropCommand;
 import com.lux.agroges.crop.Domain.Model.commands.CreateCropCommand;
 
 import com.lux.agroges.crop.Domain.Model.commands.DeleteCropCommand;
@@ -24,7 +25,6 @@ public class CropCommandServiceImpl implements CropCommandService {
     }
     @Override
     @Transactional
-
     public Optional<Crop> handle(CreateCropCommand command) {
         if (cropRepository.existsByCropId(new CropId(command.cropId()))) {
             throw new IllegalArgumentException("Crop already exists");
@@ -62,6 +62,24 @@ public class CropCommandServiceImpl implements CropCommandService {
         Crop crop= cropRepository.findById(command.cropId()).
                 orElseThrow(()->new IllegalArgumentException("Crop not Found"));
         cropRepository.delete(crop);
+    }
+
+    @Override
+    public void handle(AddProductToCropCommand command){
+        var cropOptional= cropRepository.findById(command.cropId());
+        var productOptional= productRepository.findById(command.productId());
+        if(cropOptional.isEmpty() || productOptional.isEmpty()){
+            throw new IllegalArgumentException("Crop or Product not found");
+        }
+        try {
+            var crop=cropOptional.get();
+            var product=productOptional.get();
+            crop.addCropItem(product);
+            crop.getLastCropItem().updateNextItem(null);
+            cropRepository.save(crop);
+        }catch (Exception e){
+            throw new IllegalArgumentException("Error adding product to crop");
+        }
     }
 
 

@@ -117,18 +117,21 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
 
     }
 
-    public void updateItem(CropItem cropItem){
-        //Implementar todavía falta
+    public void updateItem(Long itemId, Product product, CropItem cropItem){
+
     }
 
 
     public CropItem getPreviousItem(CropItem cropItem){
-        return cropItems.stream().filter(item->item.getNextItem()== cropItem).findFirst().orElse(null);
+        return cropItems.stream().filter(item->item.getNextItem()== cropItem)
+                .findFirst().orElse(null);
     }
 
     public CropItem getLastCropItem(){
-        return cropItems.stream().filter(item->item.getNextItem()==null).findFirst().orElse(null);
+        return cropItems.stream().filter(item->item.getNextItem()==null)
+                .findFirst().orElse(null);
     }
+
 
     public Crop updateCrop(Long id,String code,String currency,Long value){
         this.cropId=new CropId(id);
