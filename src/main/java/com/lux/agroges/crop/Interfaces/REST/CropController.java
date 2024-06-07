@@ -1,13 +1,13 @@
 package com.lux.agroges.crop.Interfaces.REST;
 
-import com.lux.agroges.crop.Domain.Model.aggregates.Crop;
+import com.lux.agroges.crop.Domain.Model.commands.AddProductToCropCommand;
+import com.lux.agroges.crop.Domain.Model.commands.DeleteCropCommand;
 import com.lux.agroges.crop.Domain.Model.queries.GetAllCropsQuery;
 import com.lux.agroges.crop.Domain.Model.queries.GetCropByIdQuery;
+import com.lux.agroges.crop.Domain.Model.queries.GetCropItemsByCropId;
 import com.lux.agroges.crop.Domain.services.*;
-import com.lux.agroges.crop.Interfaces.REST.Resources.CreateCropResource;
-import com.lux.agroges.crop.Interfaces.REST.Resources.CropResource;
-import com.lux.agroges.crop.Interfaces.REST.Transform.CreateCropCommandFromResourceAssembler;
-import com.lux.agroges.crop.Interfaces.REST.Transform.CropFromEntityAssembler;
+import com.lux.agroges.crop.Interfaces.REST.Resources.*;
+import com.lux.agroges.crop.Interfaces.REST.Transform.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -50,7 +50,7 @@ public class CropController {
     }
 
     @GetMapping("/{cropId}")
-    public ResponseEntity<Crop> getCropById(@PathVariable Long cropId){
+    public ResponseEntity<CropResource> getCropById(@PathVariable Long cropId){
         var getCropQuery= new GetCropByIdQuery(cropId);
         var crop=cropQueryService.handle(getCropQuery);
         if(crop.isEmpty()){
@@ -59,4 +59,34 @@ public class CropController {
         var cropResource= CropFromEntityAssembler.toResourceFromEntity(crop.get());
         return ResponseEntity.ok(cropResource);
     }
+    @PutMapping("/{cropId}")
+    public ResponseEntity<CropResource> updateCrop(@PathVariable Long cropId,@RequestBody UpdateCropResource resource){
+        var UpdateCrop=UpdateCropCommandFromResourceAssembler.toCommandFromResource(cropId,resource);
+        var crop=cropCommandService.handle(UpdateCrop);
+        if(crop.isEmpty()){
+            return ResponseEntity.badRequest().build();
+        }
+        var cropResource= CropFromEntityAssembler.toResourceFromEntity(crop.get());
+        return ResponseEntity.ok(cropResource);
+    }
+    @DeleteMapping ("/{cropId}")
+    public ResponseEntity<?>deleteCrop(@PathVariable Long cropId){
+        var deleteCropCommand= new DeleteCropCommand(cropId);
+        cropCommandService.handle(deleteCropCommand);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{cropId}/products/{productId}")
+    public ResponseEntity<CropItemResource>addProductToCrop(@PathVariable Long productId,@PathVariable Long cropId){
+        cropCommandService.handle(new AddProductToCropCommand(cropId,productId));
+        var cropByIdQuery= new GetCropItemsByCropId(cropId);
+        var cropItem=cropQueryService.handle(cropByIdQuery);
+        if(cropItem.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }else{
+            var cropItemResource=CropItemFromResourceToEntityAssembler.toResourceFromEntity(cropItem.getFirst());
+            return ResponseEntity.ok(cropItemResource);
+        }
+    }
+
 }

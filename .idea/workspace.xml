@@ -4,10 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crop):Application made">
+    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crop):Interfaces layer ended">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/AddProductToCropCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetAllProductsQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetCropItemsByCropId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetProductByIdQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/CropQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/ProductQueryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/CreateCropResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/CreateProductResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/CropItemResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/CropResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/ProductResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/UpdateCropResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/AddProductToCropCommandFromResourceAssembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/CreateCropCommandFromResourceAssembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/CreateProductCommandFromResourceAssembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/CropFromEntityAssembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/CropItemFromResourceToEntityAssembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/ProductFromEntityToAssembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/UpdateCropCommandFromResourceAssembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/QueryServices/CropQueryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/QueryServices/ProductQueryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/CreateCropCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/CreateCropCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/CreateProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/CreateProductCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/DeleteProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/DeleteProductCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/UpdateCropCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/UpdateCropCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/CropCommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/CropCommandService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/CropController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/CropController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +45,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -43,6 +70,9 @@
     &quot;accountId&quot;: &quot;e69161b8-1772-4b3b-be7f-ad16df80b3f3&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/ProductController.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -126,7 +156,7 @@
       <workItem from="1717198221881" duration="33224000" />
       <workItem from="1717602428430" duration="19731000" />
       <workItem from="1717676443852" duration="5431000" />
-      <workItem from="1717728614796" duration="7113000" />
+      <workItem from="1717728614796" duration="15452000" />
     </task>
     <task id="LOCAL-00003" summary="feature(crop): Implemented some of the value objects to the aggregate">
       <option name="closed" value="true" />
@@ -208,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717682193945</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feature(crop):EndPoints Created">
+      <option name="closed" value="true" />
+      <created>1717746510415</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717746510415</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +304,8 @@
     <MESSAGE value="feature(crop): Typo fixed" />
     <MESSAGE value="feature(crop):Application layer finished" />
     <MESSAGE value="feature(crop):Application made" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature(crop):Application made" />
+    <MESSAGE value="feature(crop):EndPoints Created" />
+    <MESSAGE value="feature(crop):Interfaces layer ended" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature(crop):Interfaces layer ended" />
   </component>
 </project>

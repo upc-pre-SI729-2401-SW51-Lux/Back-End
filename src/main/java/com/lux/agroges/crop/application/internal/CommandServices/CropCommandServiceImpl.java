@@ -30,7 +30,7 @@ public class CropCommandServiceImpl implements CropCommandService {
             throw new IllegalArgumentException("Crop already exists");
 
         }
-        var crop = new Crop(command.cropId(), command.cropCode(), command.value(), command.cropCurrency());
+        var crop = new Crop(command.cropId(), command.cropCode(), command.value(), command.currency());
         try {
             crop = cropRepository.save(crop);
         } catch (Exception e) {
@@ -50,7 +50,7 @@ public class CropCommandServiceImpl implements CropCommandService {
         var cropUpdate=updt.get();
         try{
             var cropUpdated = cropRepository
-                    .save(cropUpdate.updateCrop(command.cropId(),command.cropCode(),command.cropCurrency(),command.value()));
+                    .save(cropUpdate.updateCrop(command.cropId(),command.cropCode(),command.currency(),command.value()));
             return Optional.of(cropUpdated);
         }catch (Exception e){
             throw new IllegalArgumentException("Error updating crop");
