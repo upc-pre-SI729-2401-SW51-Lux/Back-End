@@ -5,184 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crops,sales):merged">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_23_55_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_23_55_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_23_55__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/aggregates/Crop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/aggregates/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/AddProductToCropCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/CreateCropCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/CreateProductCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/DeleteCropCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/DeleteProductCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/UpdateCropCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/commands/UpdateProductCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/entities/CropItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetAllCropsQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetAllProductsQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetCropByIdQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetCropItemsByCropId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/queries/GetProductByIdQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/CropCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/CropCost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/CropId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/ProductId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/ProductName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/Model/valueobjects/StockProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/CropCommandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/CropQueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/ProductCommandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Domain/services/ProductQueryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Infrastructure/persistance/jpa/Repositories/CropRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Infrastructure/persistance/jpa/Repositories/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/CropController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/CreateCropResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/CreateProductResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/CropItemResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/CropResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/ProductResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Resources/UpdateCropResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/AddProductToCropCommandFromResourceAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/CreateCropCommandFromResourceAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/CreateProductCommandFromResourceAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/CropFromEntityAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/CropItemFromResourceToEntityAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/ProductFromEntityToAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/Transform/UpdateCropCommandFromResourceAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/CommandServices/ProductCommandServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/QueryServices/CropQueryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/QueryServices/ProductQueryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/Model/aggregates/AuditableAbstractAggregateRoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/Model/entities/AuditableModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/AgrogesApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/aggregates/Crop.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/aggregates/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/commands/AddProductToCropCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/commands/CreateCropCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/commands/CreateProductCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/commands/DeleteCropCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/commands/DeleteProductCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/commands/UpdateCropCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/commands/UpdateProductCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/entities/CropItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/queries/GetAllCropsQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/queries/GetAllProductsQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/queries/GetCropByIdQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/queries/GetCropItemsByCropId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/queries/GetProductByIdQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/valueobjects/CropCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/valueobjects/CropCost.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/valueobjects/CropId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/valueobjects/ProductId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/valueobjects/ProductName.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/Model/valueobjects/StockProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/services/CropCommandService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/services/CropQueryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/services/ProductCommandService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Domain/services/ProductQueryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Infrastructure/persistance/jpa/Repositories/CropRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Infrastructure/persistance/jpa/Repositories/ProductRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/CropController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/ProductController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Resources/CreateCropResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Resources/CreateProductResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Resources/CropItemResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Resources/CropResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Resources/ProductResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Resources/UpdateCropResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Transform/AddProductToCropCommandFromResourceAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Transform/CreateCropCommandFromResourceAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Transform/CreateProductCommandFromResourceAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Transform/CropFromEntityAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Transform/CropItemFromResourceToEntityAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Transform/ProductFromEntityToAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/Interfaces/REST/Transform/UpdateCropCommandFromResourceAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/application/internal/CommandServices/ProductCommandServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/application/internal/QueryServices/CropQueryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/application/internal/QueryServices/ProductQueryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Application/Internal/CommandServices/FarmerProductPriceCommandServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Application/Internal/CommandServices/SalesOrderCommandServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Application/Internal/QueryServices/FarmerProductPriceQueryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Application/Internal/QueryServices/SalesOrderQueryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Application/Internal/eventhandlers/FarmerProductQuantityChangedHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Application/Internal/eventhandlers/SalesOrderCompletedEventHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Commands/AddFarmerProductToSalesOrderCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Commands/CancelSalesOrderCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Commands/CreateFarmerProductCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Commands/CreateSalesOrderCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Commands/DeleteFarmerProductCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Commands/RemoveProductFromSalesOrderCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Commands/SalesOrderItemCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Commands/UpdateFarmerProductCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Commands/UpdateSalesOrderCommand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Queries/GetAllFarmerProductPriceQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Queries/GetAllSalesOrderQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Queries/GetFarmerProductByIdQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Queries/GetSalesOrderItemsBySalesOrderId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Queries/InvoicesByCustomerIdQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Queries/ProfitLossByYearQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Queries/SalesOrderByOrderIdQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/Queries/SalesOrdersByCustomerIdQuery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/aggregates/FarmerProductPrice.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/aggregates/SalesOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/entities/SalesOrderItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/valuobjects/InvoiceId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/valuobjects/OrderTimestamp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/valuobjects/Price.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/valuobjects/ProductId.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/valuobjects/RucFarmer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/valuobjects/StateOfSalesOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/valuobjects/ValidityTimeFarmerProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/valuobjects/quantityProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/Model/valuobjects/stockProduct.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/services/FarmerProductCommandService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/services/FarmerProductQueryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/services/SalesOrderCommandService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Domain/services/SalesOrderQueryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Infrastructure/persistence/jpa/Repositories/FarmerProductRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Infrastructure/persistence/jpa/Repositories/SalesOrderRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/FarmerProductPriceController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/AddFarmerProductToSalesOrderResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/CreateFarmerProductPriceResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/CreateSalesOrderResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/DeleteFarmerProductPriceResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/DeleteSalesOrderResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/FarmerProductPriceResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/SalesOrderItemResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/SalesOrderResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/UpdateFarmerProductPriceResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Resources/UpdateSalesOrderResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/SalesOrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Transform/AddFarmerProductToSalesOrderCommandFromResourceAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Transform/CreateFarmerProductPriceCommandFromResourceAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Transform/CreateSalesOrderCommandFromResourceAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Transform/FarmerProductPriceFromEntityAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Transform/SalesOrderFromEntityAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Transform/SalesOrderItemFromResourceFromEntityAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Transform/UpdateFarmerProductPriceCommandFromAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/sales/Interfaces/REST/Transform/UpdateSalesOrderCommandFromResourceAssembler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/shared/domain/Model/aggregates/AuditableAbstractAggregateRoot.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/shared/domain/Model/entities/AuditableModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/shared/infrastructure/documentation/openapi/configuration/OpenApiConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/shared/infrastructure/persistence/jpa/configuration/strategy/SnakeCaseWithPluralizedTablePhysicalNamingStrategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/shared/infrastructure/persistence/jpa/strategy/SnakeCasePhysicalNamingStrategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/shared/interfaces/rest/resources/MessageResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/AgrogesApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/sales/Domain/Model/aggregates/FarmerProductPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/sales/Domain/Model/aggregates/FarmerProductPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/sales/Domain/Model/aggregates/SalesOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/sales/Domain/Model/aggregates/SalesOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/sales/Domain/Model/entities/SalesOrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/sales/Domain/Model/entities/SalesOrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/model/aggregates/AuditableAbstractAggregateRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/model/aggregates/AuditableAbstractAggregateRoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/model/entities/AuditableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/shared/domain/model/entities/AuditableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,35 +66,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.AgrogesApplication.executor": "Run",
-    "git-widget-placeholder": "mateo",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/TEO/Downloads/Back-End-sergio (1)",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AgrogesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mateo&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/TEO/Downloads/Back-End-sergio (1)&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="AgrogesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -318,6 +142,8 @@
       <workItem from="1717676443852" duration="5431000" />
       <workItem from="1717728614796" duration="21337000" />
       <workItem from="1717797300453" duration="2853000" />
+      <workItem from="1717802982660" duration="32000" />
+      <workItem from="1717803028942" duration="344000" />
     </task>
     <task id="LOCAL-00003" summary="feature(crop): Implemented some of the value objects to the aggregate">
       <option name="closed" value="true" />
@@ -415,7 +241,47 @@
       <option name="project" value="LOCAL" />
       <updated>1717778313100</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717802469291</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717802469291</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717802478642</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717802478642</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717802485699</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1717802485699</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717802647359</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717802647359</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717802701645</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717802701645</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
