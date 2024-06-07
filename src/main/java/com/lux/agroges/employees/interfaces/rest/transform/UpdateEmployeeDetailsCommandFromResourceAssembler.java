@@ -4,9 +4,9 @@ import com.lux.agroges.employees.domain.model.commands.UpdateEmployeeDetailsComm
 import com.lux.agroges.employees.interfaces.rest.resources.UpdateEmployeeDetailsResource;
 
 public class UpdateEmployeeDetailsCommandFromResourceAssembler {
-    public static UpdateEmployeeDetailsCommand toCommandFromResource(String idDocument, UpdateEmployeeDetailsResource resource) {
+    public static UpdateEmployeeDetailsCommand toCommandFromResource(Long id, UpdateEmployeeDetailsResource resource) {
         return new UpdateEmployeeDetailsCommand(
-                idDocument,
+                id,
                 resource.workPosition(),
                 resource.salary(),
                 resource.phone(),

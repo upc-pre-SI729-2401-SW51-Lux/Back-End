@@ -44,7 +44,7 @@ public class EmployeeCommandServiceImpl implements EmployeeCommandService {
 
     @Override
     public Optional<Employee> handle(UpdateEmployeeDetailsCommand command) {
-        var result = employeeRepository.findByIdDocument(command.idDocument());
+        var result = employeeRepository.findById(command.id());
         if (result.isEmpty()) throw new IllegalArgumentException("Employee does not exists.");
         var employeeDetailsToUpdate = result.get();
         try {

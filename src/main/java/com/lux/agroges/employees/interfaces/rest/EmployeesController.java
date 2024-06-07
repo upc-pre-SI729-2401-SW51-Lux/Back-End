@@ -60,9 +60,9 @@ public class EmployeesController {
         return ResponseEntity.ok(employeeResources);
     }
 
-    @PutMapping("/{idDocument}")
-    public ResponseEntity<EmployeeResource> updateEmployeeDetails(@PathVariable String idDocument, @RequestBody UpdateEmployeeDetailsResource updateEmployeeDetailsResource) {
-        var updateEmployeeDetailsCommand = UpdateEmployeeDetailsCommandFromResourceAssembler.toCommandFromResource(idDocument, updateEmployeeDetailsResource);
+    @PutMapping("/{id}")
+    public ResponseEntity<EmployeeResource> updateEmployeeDetails(@PathVariable Long id, @RequestBody UpdateEmployeeDetailsResource updateEmployeeDetailsResource) {
+        var updateEmployeeDetailsCommand = UpdateEmployeeDetailsCommandFromResourceAssembler.toCommandFromResource(id, updateEmployeeDetailsResource);
         var updatedEmployeeDetails = employeeCommandService.handle(updateEmployeeDetailsCommand);
         if (updatedEmployeeDetails.isEmpty()) { return ResponseEntity.badRequest().build(); }
         var employeeResource = EmployeeResourceFromEntityAssembler.toResourceFromEntity(updatedEmployeeDetails.get());
