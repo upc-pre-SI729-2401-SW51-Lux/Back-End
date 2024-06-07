@@ -8,15 +8,18 @@ import com.lux.agroges.employees.interfaces.rest.resources.CreateEmployeeResourc
 import com.lux.agroges.employees.interfaces.rest.resources.EmployeeResource;
 import com.lux.agroges.employees.interfaces.rest.transform.CreateEmployeeCommandFromResourceAssembler;
 import com.lux.agroges.employees.interfaces.rest.transform.EmployeeResourceFromEntityAssembler;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+
+@RestController
+@RequestMapping(value = "api/v1/employees", produces = APPLICATION_JSON_VALUE)
+@Tag(name = "Employees", description = "Employees Management Endpoints")
 public class EmployeesController {
     private final EmployeeCommandService employeeCommandService;
     private final EmployeeQueryService employeeQueryService;
@@ -44,6 +47,7 @@ public class EmployeesController {
         return ResponseEntity.ok(employeeResource);
     }
 
+    @GetMapping
     public ResponseEntity<List<EmployeeResource>> getAllEmployees() {
         var getAllEmployeesQuery = new GetAllEmployeesQuery();
         var employees = employeeQueryService.handle(getAllEmployeesQuery);
