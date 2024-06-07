@@ -1,4 +1,4 @@
-package com.lux.agroges.shared.domain.model.aggregates;
+package com.lux.agroges.shared.domain.Model.aggregates;
 
 import jakarta.persistence.*;
 import lombok.Getter;

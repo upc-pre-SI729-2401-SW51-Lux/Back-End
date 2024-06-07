@@ -1,4 +1,4 @@
-package com.lux.agroges.shared.domain.model.entities;
+package com.lux.agroges.shared.domain.Model.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
