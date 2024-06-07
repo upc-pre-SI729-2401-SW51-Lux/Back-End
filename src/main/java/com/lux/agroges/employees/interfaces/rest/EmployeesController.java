@@ -1,13 +1,16 @@
 package com.lux.agroges.employees.interfaces.rest;
 
+import com.lux.agroges.employees.domain.model.commands.DeleteEmployeeCommand;
 import com.lux.agroges.employees.domain.model.queries.GetAllEmployeesQuery;
 import com.lux.agroges.employees.domain.model.queries.GetEmployeeByIdDocumentQuery;
 import com.lux.agroges.employees.domain.services.EmployeeCommandService;
 import com.lux.agroges.employees.domain.services.EmployeeQueryService;
 import com.lux.agroges.employees.interfaces.rest.resources.CreateEmployeeResource;
 import com.lux.agroges.employees.interfaces.rest.resources.EmployeeResource;
+import com.lux.agroges.employees.interfaces.rest.resources.UpdateEmployeeDetailsResource;
 import com.lux.agroges.employees.interfaces.rest.transform.CreateEmployeeCommandFromResourceAssembler;
 import com.lux.agroges.employees.interfaces.rest.transform.EmployeeResourceFromEntityAssembler;
+import com.lux.agroges.employees.interfaces.rest.transform.UpdateEmployeeDetailsCommandFromResourceAssembler;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -55,5 +58,21 @@ public class EmployeesController {
                 .map(EmployeeResourceFromEntityAssembler::toResourceFromEntity)
                 .toList();
         return ResponseEntity.ok(employeeResources);
+    }
+
+    @PutMapping("/{idDocument}")
+    public ResponseEntity<EmployeeResource> updateEmployeeDetails(@PathVariable String idDocument, @RequestBody UpdateEmployeeDetailsResource updateEmployeeDetailsResource) {
+        var updateEmployeeDetailsCommand = UpdateEmployeeDetailsCommandFromResourceAssembler.toCommandFromResource(idDocument, updateEmployeeDetailsResource);
+        var updatedEmployeeDetails = employeeCommandService.handle(updateEmployeeDetailsCommand);
+        if (updatedEmployeeDetails.isEmpty()) { return ResponseEntity.badRequest().build(); }
+        var employeeResource = EmployeeResourceFromEntityAssembler.toResourceFromEntity(updatedEmployeeDetails.get());
+        return ResponseEntity.ok(employeeResource);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteEmployee(@PathVariable Long id) {
+        var deleteEmployeeCommand = new DeleteEmployeeCommand(id);
+        employeeCommandService.handle(deleteEmployeeCommand);
+        return ResponseEntity.ok("Employee deleted successfully.");
     }
 }
