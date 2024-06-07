@@ -2,7 +2,7 @@ package com.lux.agroges.sales.Domain.Model.entities;
 
 import com.lux.agroges.sales.Domain.Model.aggregates.FarmerProductPrice;
 import com.lux.agroges.sales.Domain.Model.aggregates.SalesOrder;
-import com.lux.agroges.shared.domain.model.entities.AuditableModel;
+import com.lux.agroges.shared.domain.Model.entities.AuditableModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

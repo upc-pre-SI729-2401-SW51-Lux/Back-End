@@ -5,7 +5,7 @@ import com.lux.agroges.sales.Domain.Model.valuobjects.ProductId;
 import jakarta.persistence.Id;
 import com.lux.agroges.sales.Domain.Model.valuobjects.quantityProduct;
 import com.lux.agroges.sales.Domain.Model.valuobjects.ValidityTimeFarmerProduct;
-import com.lux.agroges.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
+import com.lux.agroges.shared.domain.Model.aggregates.AuditableAbstractAggregateRoot;
 import jakarta.persistence.*;
 import lombok.Getter;
 
