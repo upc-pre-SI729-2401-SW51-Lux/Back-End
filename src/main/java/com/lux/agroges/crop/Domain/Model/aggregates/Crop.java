@@ -3,8 +3,14 @@ import com.lux.agroges.crop.Domain.Model.entities.CropItem;
 import com.lux.agroges.crop.Domain.Model.valueobjects.*;
 import com.lux.agroges.shared.domain.Model.aggregates.AuditableAbstractAggregateRoot;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
+import jakarta.persistence.AttributeOverrides;
+import jakarta.persistence.Column;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.AttributeOverride;
 import lombok.Getter;
+import jakarta.persistence.OneToMany;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +19,6 @@ import java.util.List;
 @Getter
 @Entity
 public class Crop extends AuditableAbstractAggregateRoot<Crop> {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //No usar un ; al lado de un generated value, puede causar problemas a largo plazo
-    private Long Id;
 
     @Embedded
     @AttributeOverrides(
@@ -38,35 +40,19 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
     private CropCode cropCode;
 
     @Embedded
-    @AttributeOverrides({
-            @AttributeOverride(name="productId",column=@Column(name="product_id")),
-    })
-    private ProductId product;
-
-    //en estos override podemos meter la snake case
-    private ProductName productName;
-
-
-    @Embedded
-    @AttributeOverrides(
-            {
-                    @AttributeOverride(name="stockProduct",column=@Column(name="stock_product")),
-            }
-    )
-    private StockProduct stockProduct;
-
-    @Embedded
     @AttributeOverrides(
             {
                     @AttributeOverride(name="cropCost",column=@Column(name="crop_cost")),
             }
     )
 
-
     private CropCost cropCost;
 
 
-    @OneToMany(mappedBy= "Product",cascade = CascadeType.ALL)
+
+
+
+    @OneToMany(mappedBy= "crop",cascade = CascadeType.ALL)
     private List<CropItem> cropItems;
     public Crop(){
         this.cropId=new CropId(0L);
@@ -76,9 +62,9 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
 
     }
 
-    public Crop(Long id, String currency, Long amount, String cropCode){
+    public Crop(Long cropId, String currency, Long amount, String cropCode){
         this();
-        this.cropId=new CropId(id);
+        this.cropId=new CropId(cropId);
         this.cropCost= new CropCost(currency,amount);
         this.cropCode= new CropCode(cropCode);
         this.cropItems = new ArrayList<>();

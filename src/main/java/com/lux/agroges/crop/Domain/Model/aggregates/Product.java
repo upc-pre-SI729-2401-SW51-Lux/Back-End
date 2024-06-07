@@ -11,9 +11,7 @@ import lombok.Getter;
 @Getter
 @Entity
 public class Product extends AuditableAbstractAggregateRoot<Product> {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
 
     @Embedded
     @AttributeOverrides(

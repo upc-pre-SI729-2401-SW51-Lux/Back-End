@@ -7,6 +7,6 @@ import com.lux.agroges.crop.Interfaces.REST.Resources.CropItemResource;
 
 public class CropItemFromResourceToEntityAssembler {
     public static CropItemResource toResourceFromEntity(CropItem entity){
-        return new CropItemResource(entity.getId(),entity.getProduct().getId());
+        return new CropItemResource(entity.getEid(),entity.getProduct().getId());
     }
 }
