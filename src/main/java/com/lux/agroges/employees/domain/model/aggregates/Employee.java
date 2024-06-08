@@ -1,8 +1,6 @@
 package com.lux.agroges.employees.domain.model.aggregates;
 
-import com.lux.agroges.employees.domain.model.valueobjects.EmailAddress;
-import com.lux.agroges.employees.domain.model.valueobjects.EmployeeDetails;
-import com.lux.agroges.employees.domain.model.valueobjects.EmployeeName;
+import com.lux.agroges.employees.domain.model.valueobjects.*;
 import jakarta.persistence.*;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -11,6 +9,7 @@ import org.springframework.data.domain.AbstractAggregateRoot;
 
 import java.util.Date;
 
+@Getter
 @Entity
 public class Employee extends AbstractAggregateRoot<Employee> {
     @Id
@@ -19,6 +18,9 @@ public class Employee extends AbstractAggregateRoot<Employee> {
     private Long id;
 
     @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "name", column = @Column(name = "employee_name"))
+    })
     private EmployeeName name;
 
     @Embedded
@@ -29,7 +31,7 @@ public class Employee extends AbstractAggregateRoot<Employee> {
 
     @Embedded
     @AttributeOverrides({
-            @AttributeOverride(name = "idDocument", column = @Column(name = "id_document")),
+            @AttributeOverride(name = "idDocument", column = @Column(name = "id_employee_document")),
             @AttributeOverride(name = "workPosition", column = @Column(name = "work_position")),
             @AttributeOverride(name = "salary", column = @Column(name = "salary")),
             @AttributeOverride(name = "phone", column = @Column(name = "phone")),
@@ -37,6 +39,8 @@ public class Employee extends AbstractAggregateRoot<Employee> {
             @AttributeOverride(name = "photoUrl", column = @Column(name = "photo_url"))
     })
     private EmployeeDetails details;
+
+    private String idDocument;
 
     @CreatedDate
     private Date createdAt;
@@ -54,13 +58,16 @@ public class Employee extends AbstractAggregateRoot<Employee> {
 
     }
 
+
+    // other methods...
+
     public Employee updateEmployeeDetails(String workPosition, Integer salary, String phone, Integer age, String photoUrl) {
         this.details = new EmployeeDetails().updateEmployeeDetails(workPosition, salary, phone, age, photoUrl);
         return this;
     }
 
     public String getIdDocument() {
-        return details.idDocument();
+        return this.details.idDocument();
     }
 
     public String getFullName() {

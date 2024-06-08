@@ -21,10 +21,6 @@ public class EmployeeCommandServiceImpl implements EmployeeCommandService {
 
     @Override
     public Optional<Employee> handle(CreateEmployeeCommand command) {
-        var id = new EmployeeDetails(command.idDocument(), command.workPosition(), command.salary(), command.phone(), command.age(), command.photoUrl());
-        employeeRepository.findByIdDocument(id.getEmployeeId()).map(employee -> {
-            throw new IllegalArgumentException("Employee with id " + id + " already exists.");
-        });
         var employee = new Employee(command.firstName(), command.lastName(), command.email(), command.idDocument(), command.workPosition(), command.salary(), command.phone(), command.age(), command.photoUrl());
         employeeRepository.save(employee);
         return Optional.of(employee);
