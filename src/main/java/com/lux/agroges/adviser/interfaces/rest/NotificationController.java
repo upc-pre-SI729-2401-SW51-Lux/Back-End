@@ -8,6 +8,7 @@ import com.lux.agroges.adviser.interfaces.rest.resources.CreateNotificationResou
 import com.lux.agroges.adviser.interfaces.rest.resources.UpdateNotificationResource;
 import com.lux.agroges.adviser.interfaces.rest.transform.CreateNotificationCommandFromResourceAssembler;
 import com.lux.agroges.adviser.interfaces.rest.transform.UpdateNotificationCommandFromResourceAssembler;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/notifications")
+@Tag(name = "Notifications", description = "Contract Management Endpoints")
 public class NotificationController {
     private final NotificationCommandService notificationCommandService;
     private final NotificationQueryService notificationQueryService;

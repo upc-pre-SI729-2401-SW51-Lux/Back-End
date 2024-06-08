@@ -5,8 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crops,sales):merged">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_23_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_23_55__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/adviser/interfaces/rest/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/adviser/interfaces/rest/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/application/internal/commandservices/EmployeeCommandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/application/internal/queryservices/EmployeeQueryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/aggregates/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/commands/CreateEmployeeCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/commands/DeleteEmployeeCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/commands/UpdateEmployeeDetailsCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/queries/GetAllEmployeesQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/queries/GetEmployeeByIdDocumentQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/queries/GetEmployeeByIdQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/queries/GetEmployeeByNameQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/valueobjects/EmailAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/valueobjects/EmployeeDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/valueobjects/EmployeeName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/services/EmployeeCommandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/services/EmployeeQueryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/infrastructure/persistence/jpa/repositories/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/acl/EmployeesContextFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/EmployeesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/resources/CreateEmployeeResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/resources/EmployeeResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/resources/UpdateEmployeeDetailsResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/transform/CreateEmployeeCommandFromResourceAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/transform/EmployeeResourceFromEntityAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/transform/UpdateEmployeeDetailsCommandFromResourceAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/application/internal/commandservices/EmployeeCommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/application/internal/commandservices/EmployeeCommandServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/domain/model/aggregates/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/domain/model/aggregates/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/infrastructure/persistence/jpa/repositories/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/infrastructure/persistence/jpa/repositories/EmployeeRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +173,7 @@
       <workItem from="1717797300453" duration="2853000" />
       <workItem from="1717802982660" duration="32000" />
       <workItem from="1717803028942" duration="344000" />
+      <workItem from="1717803885339" duration="3655000" />
     </task>
     <task id="LOCAL-00003" summary="feature(crop): Implemented some of the value objects to the aggregate">
       <option name="closed" value="true" />
@@ -345,5 +375,15 @@
     <MESSAGE value="feature(crop):Swagger issue" />
     <MESSAGE value="feature(crops,sales):merged" />
     <option name="LAST_COMMIT_MESSAGE" value="feature(crops,sales):merged" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.query.sqm.PathElementException" package="org.hibernate.query.sqm" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

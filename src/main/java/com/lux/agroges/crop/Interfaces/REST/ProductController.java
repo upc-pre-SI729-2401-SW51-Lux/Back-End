@@ -18,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping
-@Tag(name="Prducts",description = "Product management endpoints")
+@Tag(name="CropProducts",description = "Crop Products management endpoints")
 public class ProductController {
     private final ProductCommandService productCommandService;
     private final ProductQueryService productQueryService;
@@ -68,7 +68,7 @@ public class ProductController {
         return ResponseEntity.ok(productResource);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{productId}")
     public ResponseEntity<?>deleteProduct(@PathVariable Long productId){
         var deleteProductCommand= new DeleteProductCommand(productId);
         productCommandService.handle(deleteProductCommand);
