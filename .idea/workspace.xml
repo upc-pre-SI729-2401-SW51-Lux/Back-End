@@ -4,84 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crops,sales):merged">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/adviser/application/Internal/commandservices/ContractCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/adviser/application/Internal/commandservices/ContractCommandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/AgrogesApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/application/Internal/commandservices/ContractCommandServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/application/Internal/commandservices/NotificationCommandServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/application/Internal/queryservices/ContractQueryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/application/Internal/queryservices/NotificationQueryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/aggregates/Contract.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/aggregates/Notification.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/CreateContractCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/CreateNotificationCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/DeleteNotificationCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/UpdateContractCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/UpdateNotificationCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/entities/ContractItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/queries/GetAllContractsQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/queries/GetAllNotificationsByTransmitterQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/queries/GetContractByIdQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/queries/GetNotificationByTransmitterQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/valueobjects/CompanyRuc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/services/ContractCommandService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/services/ContractQueryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/services/NotificationCommandService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/services/NotificationQueryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/infrastructure/persistence/jpa/repositories/ContractRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/infrastructure/persistence/jpa/repositories/NotificationRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/ContractController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/NotificationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/resources/CreateContractResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/resources/CreateNotificationResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/resources/UpdateContractResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/resources/UpdateNotificationResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/ContractFromEntityAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/CreateContractCommandFromResourceAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/CreateNotificationCommandFromResourceAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/NotificationFromEntityAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/UpdateContractCommandFromResourceAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/UpdateNotificationCommandFromResourceAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/adviser/Application/Internal/CommandServices/ContractCommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/adviser/Application/Internal/CommandServices/ContractCommandServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/Application/Internal/CommandServices/ContractCommandServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/Application/Internal/CommandServices/NotificationCommandServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/Application/Internal/queryservices/ContractQueryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/Application/Internal/queryservices/NotificationQueryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/aggregates/Contract.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/aggregates/Notification.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/CreateContractCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/CreateNotificationCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/DeleteNotificationCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/UpdateContractCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/UpdateNotificationCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/entities/ContractItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/queries/GetAllContractsQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/queries/GetAllNotificationsByTransmitterQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/queries/GetContractByIdQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/queries/GetNotificationByTransmitterQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/valueobjects/CompanyRuc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/services/ContractCommandService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/services/ContractQueryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/services/NotificationCommandService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/services/NotificationQueryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/infrastructure/persistence/jpa/repositories/ContractRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/infrastructure/persistence/jpa/repositories/NotificationRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/ContractController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/NotificationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/resources/CreateContractResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/resources/CreateNotificationResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/resources/UpdateContractResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/resources/UpdateNotificationResource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/ContractFromEntityAssembler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/CreateContractCommandFromResourceAssembler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/CreateNotificationCommandFromResourceAssembler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/NotificationFromEntityAssembler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/UpdateContractCommandFromResourceAssembler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/UpdateNotificationCommandFromResourceAssembler.class" beforeDir="false" />
-    </list>
+    <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crops,sales):merged" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -452,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717802701645</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717829508911</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717829508912</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
