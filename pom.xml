@@ -82,7 +82,7 @@
                     <appName>evening-cove-75289</appName>
 
                     <processTypes>
-                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* main</web>
+                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.lux.agroges.AgrogesApplication</web>
                     </processTypes>
                 </configuration>
             </plugin>

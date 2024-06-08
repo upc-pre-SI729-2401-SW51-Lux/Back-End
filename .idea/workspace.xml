@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crops,sales):merged">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system.properties" beforeDir="false" afterPath="$PROJECT_DIR$/system.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -392,7 +395,7 @@
       <workItem from="1717837655845" duration="177000" />
       <workItem from="1717837877613" duration="1258000" />
       <workItem from="1717859837584" duration="7553000" />
-      <workItem from="1717867797447" duration="2399000" />
+      <workItem from="1717867797447" duration="5718000" />
     </task>
     <task id="LOCAL-00003" summary="feature(crop): Implemented some of the value objects to the aggregate">
       <option name="closed" value="true" />
@@ -618,7 +621,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717867858429</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717870458882</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1717870458882</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
