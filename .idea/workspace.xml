@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crops,sales):merged">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/agroges-0.0.1-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +55,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+        <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -83,16 +87,24 @@
     "JUnit.AgrogesApplicationTests.contextLoads.executor": "Run",
     "Maven.agroges [--version].executor": "Run",
     "Maven.agroges [:package...].executor": "Run",
+    "Maven.agroges [clean,heroku:deploy-jar].executor": "Run",
+    "Maven.agroges [clean,heroku:deploy-war].executor": "Run",
     "Maven.agroges [clean,install].executor": "Run",
     "Maven.agroges [clean].executor": "Run",
     "Maven.agroges [compile].executor": "Run",
+    "Maven.agroges [deploy:deploy-file].executor": "Run",
     "Maven.agroges [deploy].executor": "Run",
+    "Maven.agroges [heroku:deploy...].executor": "Run",
+    "Maven.agroges [heroku:eclipse-launch-config].executor": "Run",
+    "Maven.agroges [heroku:run-war].executor": "Run",
     "Maven.agroges [package].executor": "Run",
+    "Maven.agroges [site:deploy].executor": "Run",
     "Maven.agroges [site:stage-deploy].executor": "Run",
     "Maven.agroges [site].executor": "Run",
     "Maven.agroges [spring-boot:build-image-no-fork].executor": "Run",
     "Maven.agroges [spring-boot:build-image].executor": "Run",
     "Maven.agroges [spring-boot:package...].executor": "Run",
+    "Maven.agroges [spring-boot:repackage].executor": "Run",
     "Maven.agroges [spring-boot:run...].executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -106,7 +118,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lasto/IdeaProjects/Back-Endasd",
+    "last_opened_file_path": "C:/Users/lasto/IdeaProjects/Back-Endasd/src/test/static",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -124,6 +136,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lasto\IdeaProjects\Back-Endasd\src\test\static" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="git push heroku master" />
@@ -131,7 +148,6 @@
       <command value="brew tap heroku/brew &amp;&amp; brew install heroku" />
       <command value="mvn clean install" />
       <command value="mvn clean" />
-      <command value="mvn package" />
       <command value="mvn spring-boot:build-image" />
       <command value="mvn spring-boot:run -Dspring-boot.run.profiles=dev" />
       <command value="mvn site:stage-deploy" />
@@ -144,6 +160,15 @@
       <command value="curl https://cli-assets.heroku.com/install.sh | sh" />
       <command value="mvn site" />
       <command value="mvn --version" />
+      <command value="mvn spring-boot:repackage" />
+      <command value="mvn site:deploy" />
+      <command value="mvn deploy:deploy-file" />
+      <command value="mvn heroku:eclipse-launch-config" />
+      <command value="mvn heroku:run-war" />
+      <command value="mvn package" />
+      <command value="mvn clean heroku:deploy-war" />
+      <command value="mvn clean heroku:deploy-jar" />
+      <command value="mvn heroku:deploy -Dheroku.appName=evening-cove-75289" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -157,6 +182,24 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.AgrogesApplication">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
       <deployment type="docker-image">
         <settings>
@@ -167,6 +210,25 @@
       <method v="2">
         <option name="LaunchBrowser.Before.Run" />
       </method>
+    </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="mysql:latest" />
+          <option name="containerName" value="" />
+        </settings>
+      </deployment>
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" />
+      </method>
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
     </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
@@ -202,12 +264,46 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yaml.agroges-os: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
               <option value="agroges-os" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.agroges-os: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="agroges-os" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yaml" />
@@ -290,7 +386,8 @@
       <workItem from="1717803028942" duration="344000" />
       <workItem from="1717803885339" duration="3655000" />
       <workItem from="1717837655845" duration="177000" />
-      <workItem from="1717837877613" duration="1098000" />
+      <workItem from="1717837877613" duration="1258000" />
+      <workItem from="1717859837584" duration="7553000" />
     </task>
     <task id="LOCAL-00003" summary="feature(crop): Implemented some of the value objects to the aggregate">
       <option name="closed" value="true" />
@@ -484,7 +581,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717834005440</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717839085733</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1717839085733</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717863461596</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1717863461596</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
