@@ -18,8 +18,6 @@
         <java.version>22</java.version>
         <maven.compiler.source>22</maven.compiler.source>
         <maven.compiler.target>22</maven.compiler.target>
-        <maven.test.skip>true</maven.test.skip>
-        <skipTests>true</skipTests>
     </properties>
     <dependencies>
         <dependency>
