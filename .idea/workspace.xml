@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crops,sales):merged">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/agroges-0.0.1-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +23,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="andrea" />
@@ -51,10 +46,18 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="maven-properties://System.properties" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="checksumPolicy" value="FAIL" />
+        <option name="localRepository" value="C:\Users\lasto\.m2\repository" />
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+        <option name="useMavenConfig" value="false" />
+        <option name="userSettingsFile" value="C:\Users\lasto\.m2\settings.xml" />
         <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -85,6 +88,7 @@
     "Downloaded.Files.Path.Enabled": "true",
     "HTTP Request.generated-requests | #1.executor": "Run",
     "JUnit.AgrogesApplicationTests.contextLoads.executor": "Run",
+    "JUnit.All in agroges.executor": "Profiler#1",
     "Maven.agroges [--version].executor": "Run",
     "Maven.agroges [:package...].executor": "Run",
     "Maven.agroges [clean,heroku:deploy-jar].executor": "Run",
@@ -127,7 +131,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -165,9 +169,9 @@
       <command value="mvn deploy:deploy-file" />
       <command value="mvn heroku:eclipse-launch-config" />
       <command value="mvn heroku:run-war" />
-      <command value="mvn package" />
       <command value="mvn clean heroku:deploy-war" />
       <command value="mvn clean heroku:deploy-jar" />
+      <command value="mvn package" />
       <command value="mvn heroku:deploy -Dheroku.appName=evening-cove-75289" />
     </option>
   </component>
@@ -200,15 +204,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
-      <deployment type="docker-image">
-        <settings>
-          <option name="imageTag" value="mysql:latest" />
-          <option name="containerName" value="" />
-        </settings>
-      </deployment>
+    <configuration name="All in agroges" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="agroges" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
-        <option name="LaunchBrowser.Before.Run" />
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
@@ -222,13 +223,16 @@
         <option name="LaunchBrowser.Before.Run" />
       </method>
     </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
         <settings>
-          <option name="sourceFilePath" value="Dockerfile" />
+          <option name="imageTag" value="mysql:latest" />
+          <option name="containerName" value="" />
         </settings>
       </deployment>
-      <method v="2" />
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" />
+      </method>
     </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
@@ -329,16 +333,16 @@
       <item itemvalue="Docker.docker-compose.yaml.db: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       <item itemvalue="Docker.Docker Image" />
-      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="JUnit.All in agroges" />
       <item itemvalue="Spring Boot.AgrogesApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in agroges" />
         <item itemvalue="Docker.docker-compose.yaml.agroges-os: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yaml.db: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.Docker Image" />
-        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -388,6 +392,7 @@
       <workItem from="1717837655845" duration="177000" />
       <workItem from="1717837877613" duration="1258000" />
       <workItem from="1717859837584" duration="7553000" />
+      <workItem from="1717867797447" duration="2399000" />
     </task>
     <task id="LOCAL-00003" summary="feature(crop): Implemented some of the value objects to the aggregate">
       <option name="closed" value="true" />
@@ -597,7 +602,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717863461596</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717867817458</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1717867817458</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1717867858429</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1717867858429</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
