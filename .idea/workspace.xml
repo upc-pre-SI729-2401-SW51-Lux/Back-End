@@ -5,37 +5,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crops,sales):merged">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_23_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_05_2024_23_55__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/adviser/interfaces/rest/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/adviser/interfaces/rest/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/Interfaces/REST/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/application/internal/commandservices/EmployeeCommandServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/application/internal/queryservices/EmployeeQueryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/aggregates/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/commands/CreateEmployeeCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/commands/DeleteEmployeeCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/commands/UpdateEmployeeDetailsCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/queries/GetAllEmployeesQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/queries/GetEmployeeByIdDocumentQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/queries/GetEmployeeByIdQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/queries/GetEmployeeByNameQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/valueobjects/EmailAddress.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/valueobjects/EmployeeDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/model/valueobjects/EmployeeName.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/services/EmployeeCommandService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/domain/services/EmployeeQueryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/infrastructure/persistence/jpa/repositories/EmployeeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/acl/EmployeesContextFacade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/EmployeesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/resources/CreateEmployeeResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/resources/EmployeeResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/resources/UpdateEmployeeDetailsResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/transform/CreateEmployeeCommandFromResourceAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/transform/EmployeeResourceFromEntityAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/employees/interfaces/rest/transform/UpdateEmployeeDetailsCommandFromResourceAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/application/internal/commandservices/EmployeeCommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/application/internal/commandservices/EmployeeCommandServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/domain/model/aggregates/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/domain/model/aggregates/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/infrastructure/persistence/jpa/repositories/EmployeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/employees/infrastructure/persistence/jpa/repositories/EmployeeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/adviser/application/Internal/commandservices/ContractCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/adviser/application/Internal/commandservices/ContractCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/AgrogesApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/application/Internal/commandservices/ContractCommandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/application/Internal/commandservices/NotificationCommandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/application/Internal/queryservices/ContractQueryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/application/Internal/queryservices/NotificationQueryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/aggregates/Contract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/aggregates/Notification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/CreateContractCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/CreateNotificationCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/DeleteNotificationCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/UpdateContractCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/commands/UpdateNotificationCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/entities/ContractItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/queries/GetAllContractsQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/queries/GetAllNotificationsByTransmitterQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/queries/GetContractByIdQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/queries/GetNotificationByTransmitterQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/model/valueobjects/CompanyRuc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/services/ContractCommandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/services/ContractQueryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/services/NotificationCommandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/domain/services/NotificationQueryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/infrastructure/persistence/jpa/repositories/ContractRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/infrastructure/persistence/jpa/repositories/NotificationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/ContractController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/NotificationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/resources/CreateContractResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/resources/CreateNotificationResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/resources/UpdateContractResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/resources/UpdateNotificationResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/ContractFromEntityAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/CreateContractCommandFromResourceAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/CreateNotificationCommandFromResourceAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/NotificationFromEntityAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/UpdateContractCommandFromResourceAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lux/agroges/adviser/interfaces/rest/transform/UpdateNotificationCommandFromResourceAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/adviser/Application/Internal/CommandServices/ContractCommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/adviser/Application/Internal/CommandServices/ContractCommandServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lux/agroges/crop/application/internal/CommandServices/CropCommandServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/Application/Internal/CommandServices/ContractCommandServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/Application/Internal/CommandServices/NotificationCommandServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/Application/Internal/queryservices/ContractQueryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/Application/Internal/queryservices/NotificationQueryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/aggregates/Contract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/aggregates/Notification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/CreateContractCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/CreateNotificationCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/DeleteNotificationCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/UpdateContractCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/commands/UpdateNotificationCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/entities/ContractItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/queries/GetAllContractsQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/queries/GetAllNotificationsByTransmitterQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/queries/GetContractByIdQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/queries/GetNotificationByTransmitterQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/model/valueobjects/CompanyRuc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/services/ContractCommandService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/services/ContractQueryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/services/NotificationCommandService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/domain/services/NotificationQueryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/infrastructure/persistence/jpa/repositories/ContractRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/infrastructure/persistence/jpa/repositories/NotificationRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/ContractController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/NotificationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/resources/CreateContractResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/resources/CreateNotificationResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/resources/UpdateContractResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/resources/UpdateNotificationResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/ContractFromEntityAssembler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/CreateContractCommandFromResourceAssembler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/CreateNotificationCommandFromResourceAssembler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/NotificationFromEntityAssembler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/UpdateContractCommandFromResourceAssembler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lux/agroges/adviser/interfaces/rest/transform/UpdateNotificationCommandFromResourceAssembler.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +93,7 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="Record" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -95,36 +141,86 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AgrogesApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;mateo&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/TEO/Downloads/Back-End-sergio (1)&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yaml.layer_api: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "JUnit.AgrogesApplicationTests.contextLoads.executor": "Run",
+    "Maven.agroges [:package...].executor": "Run",
+    "Maven.agroges [clean,install].executor": "Run",
+    "Maven.agroges [clean].executor": "Run",
+    "Maven.agroges [compile].executor": "Run",
+    "Maven.agroges [deploy].executor": "Run",
+    "Maven.agroges [package].executor": "Run",
+    "Maven.agroges [site:stage-deploy].executor": "Run",
+    "Maven.agroges [spring-boot:build-image-no-fork].executor": "Run",
+    "Maven.agroges [spring-boot:build-image].executor": "Run",
+    "Maven.agroges [spring-boot:package...].executor": "Run",
+    "Maven.agroges [spring-boot:run...].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AgrogesApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/TEO/Downloads/Back-End-sergio (1)",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="git push heroku master" />
+      <command value="heroku login" />
+      <command value="brew tap heroku/brew &amp;&amp; brew install heroku" />
+      <command value="curl https://cli-assets.heroku.com/install.sh | sh" />
+      <command value="mvn deploy" />
+      <command value="mvn compile" />
+      <command value="mvn clean install" />
+      <command value="mvn clean" />
+      <command value="mvn package" />
+      <command value="mvn spring-boot:build-image" />
+      <command value="mvn spring-boot:run -Dspring-boot.run.profiles=dev" />
+      <command value="mvn site:stage-deploy" />
+      <command value="mvn spring-boot:build-image-no-fork" />
+      <command value="mvn spring-boot:package -Dspring-boot.run.profiles=dev" />
+      <command value="mvn :package -Dspring-boot.run.profiles=dev" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Docker.Dockerfile">
+    <configuration name="AgrogesApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="agroges" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lux.agroges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lux.agroges" />
+      <option name="MAIN_CLASS_NAME" value="com.lux.agroges.AgrogesApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AgrogesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="agroges" />
@@ -133,6 +229,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yaml.layer_api: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="layer_api" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yaml.layer_api: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="JUnit.AgrogesApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -383,6 +524,10 @@
           <properties class="org.hibernate.query.sqm.PathElementException" package="org.hibernate.query.sqm" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/6.1.6/spring-test-6.1.6-sources.jar!/org/springframework/test/context/aot/TestContextAotGenerator.java</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

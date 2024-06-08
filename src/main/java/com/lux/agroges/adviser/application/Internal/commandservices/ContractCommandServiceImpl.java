@@ -1,4 +1,4 @@
-package com.lux.agroges.adviser.Application.Internal.CommandServices;
+package com.lux.agroges.adviser.application.Internal.commandservices;
 
 import com.lux.agroges.adviser.domain.model.commands.CreateContractCommand;
 import com.lux.agroges.adviser.domain.model.commands.UpdateContractCommand;

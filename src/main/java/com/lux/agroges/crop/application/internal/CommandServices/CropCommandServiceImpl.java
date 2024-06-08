@@ -16,8 +16,8 @@ import java.util.Optional;
 
 @Service
 public class CropCommandServiceImpl implements CropCommandService {
-    private CropRepository cropRepository;
-    private ProductRepository productRepository;
+    private final CropRepository cropRepository;
+    private final ProductRepository productRepository;
 
     public CropCommandServiceImpl(CropRepository cropRepository, ProductRepository productRepository) {
         this.cropRepository = cropRepository;
