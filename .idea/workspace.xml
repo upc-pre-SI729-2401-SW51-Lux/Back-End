@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e50a6b1-720b-4826-a168-877468f5b815" name="Changes" comment="feature(crops,sales):merged">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/AgrogesApplication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/AgrogesApplication.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -76,71 +80,72 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Docker Image.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.agroges-os: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml.layer_api: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\lasto\\.jdks\\openjdk-22.0.1&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;HTTP Request.generated-requests | #1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AgrogesApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in agroges.executor&quot;: &quot;Profiler#1&quot;,
-    &quot;Maven.agroges [--version].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [:package...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [clean,heroku:deploy-jar].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [clean,heroku:deploy-war].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [deploy:deploy-file].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [deploy].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [heroku:dashboard].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [heroku:deploy...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [heroku:eclipse-launch-config].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [heroku:run-war].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [site:deploy].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [site:stage-deploy].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [spring-boot:build-image-no-fork].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [spring-boot:build-image].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [spring-boot:package...].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [spring-boot:repackage].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.agroges [spring-boot:run...].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AgrogesApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lasto/IdeaProjects/Back-Endasd/src/test/static&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Docker Image.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yaml.agroges-os: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml.layer_api: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Downloaded.Files.Path": "C:\\Users\\lasto\\.jdks\\openjdk-22.0.1",
+    "Downloaded.Files.Path.Enabled": "true",
+    "HTTP Request.generated-requests | #1.executor": "Run",
+    "JUnit.AgrogesApplicationTests.contextLoads.executor": "Run",
+    "JUnit.All in agroges.executor": "Profiler#1",
+    "Maven.agroges [--version].executor": "Run",
+    "Maven.agroges [:package...].executor": "Run",
+    "Maven.agroges [clean,heroku:deploy-jar].executor": "Run",
+    "Maven.agroges [clean,heroku:deploy-war].executor": "Run",
+    "Maven.agroges [clean,install].executor": "Run",
+    "Maven.agroges [clean].executor": "Run",
+    "Maven.agroges [compile].executor": "Run",
+    "Maven.agroges [deploy:deploy-file].executor": "Run",
+    "Maven.agroges [deploy].executor": "Run",
+    "Maven.agroges [heroku:dashboard].executor": "Run",
+    "Maven.agroges [heroku:deploy...].executor": "Run",
+    "Maven.agroges [heroku:eclipse-launch-config].executor": "Run",
+    "Maven.agroges [heroku:run-war].executor": "Run",
+    "Maven.agroges [package].executor": "Run",
+    "Maven.agroges [site:deploy].executor": "Run",
+    "Maven.agroges [site:stage-deploy].executor": "Run",
+    "Maven.agroges [site].executor": "Run",
+    "Maven.agroges [spring-boot:build-image-no-fork].executor": "Run",
+    "Maven.agroges [spring-boot:build-image].executor": "Run",
+    "Maven.agroges [spring-boot:package...].executor": "Run",
+    "Maven.agroges [spring-boot:repackage].executor": "Run",
+    "Maven.agroges [spring-boot:run...].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AgrogesApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lasto/IdeaProjects/Back-Endasd",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lasto\IdeaProjects\Back-Endasd\src\test\static" />
@@ -189,6 +194,36 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.AgrogesApplication">
+    <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
+      <option name="appName" />
+      <option name="appServicePlanName" />
+      <option name="appServicePlanResourceGroup" />
+      <option name="appSettingsKey" value="a9209806-e006-4865-87e2-246796e67f1c" />
+      <option name="artifact" />
+      <option name="debugOptions" />
+      <option name="deployment" />
+      <option name="deploymentStagingDirectoryPath" />
+      <option name="funcPath" />
+      <option name="functionHostArguments" />
+      <option name="hostJsonPath" />
+      <option name="insightsName" />
+      <option name="instrumentationKey" />
+      <option name="javaVersion" />
+      <option name="localSettingsJsonPath" />
+      <option name="moduleName" />
+      <option name="os" />
+      <option name="pricingTier" />
+      <option name="providerMap">
+        <map />
+      </option>
+      <option name="region" />
+      <option name="resourceGroup" />
+      <option name="stagingFolder" />
+      <option name="subscription" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -397,7 +432,9 @@
       <workItem from="1717837877613" duration="1258000" />
       <workItem from="1717859837584" duration="7553000" />
       <workItem from="1717867797447" duration="15223000" />
-      <workItem from="1718219872770" duration="4401000" />
+      <workItem from="1718219872770" duration="5172000" />
+      <workItem from="1718225229668" duration="728000" />
+      <workItem from="1718227059317" duration="3386000" />
     </task>
     <task id="LOCAL-00003" summary="feature(crop): Implemented some of the value objects to the aggregate">
       <option name="closed" value="true" />
@@ -647,7 +684,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718221347467</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="feature(crops,sales):merged">
+      <option name="closed" value="true" />
+      <created>1718224891691</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1718224891691</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

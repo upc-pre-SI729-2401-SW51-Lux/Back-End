@@ -86,6 +86,7 @@
                     </processTypes>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -100,6 +101,36 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.microsoft.azure</groupId>
+                <artifactId>azure-webapp-maven-plugin</artifactId>
+                <version>1.14.0</version>
+                <configuration>
+                    <!-- Azure subscription Id -->
+                    <subscriptionId>your-azure-subscription-id</subscriptionId>
+                    <!-- Web App information -->
+                    <appName>your-app-name</appName>
+                    <resourceGroup>your-resource-group</resourceGroup>
+                    <region>your-region</region>
+                    <!-- Java Runtime Stack for Web App on Linux-->
+                    <runtime>
+                        <os>linux</os>
+                        <javaVersion>jre8</javaVersion>
+                        <webContainer>tomcat 9.0</webContainer>
+                    </runtime>
+                    <!-- Deployment Slot -->
+                    <deployment>
+                        <resources>
+                            <resource>
+                                <directory>${project.basedir}/target</directory>
+                                <includes>
+                                    <include>*.jar</include>
+                                </includes>
+                            </resource>
+                        </resources>
+                    </deployment>
                 </configuration>
             </plugin>
         </plugins>
