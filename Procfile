@@ -1,1 +1,1 @@
-web: java -Dspring.profiles.active=default -Dserver.port=8080 -jar target/agroges-0.0.1-SNAPSHOT.jar
+web: java -Dspring.profiles.active=default -jar target/agroges-0.0.1-SNAPSHOT.jar

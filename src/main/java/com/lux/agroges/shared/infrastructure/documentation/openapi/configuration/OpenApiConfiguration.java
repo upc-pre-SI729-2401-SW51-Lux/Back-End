@@ -12,6 +12,7 @@ public class OpenApiConfiguration {
     @Bean
     public OpenAPI agroGesformOpenApi() {
         // General configuration
+
         var openApi = new OpenAPI();
         openApi
                 .info(new Info()
@@ -22,7 +23,8 @@ public class OpenApiConfiguration {
                                 .url("https://www.apache.org/licenses/LICENSE-2.0.html")))
                 .externalDocs(new ExternalDocumentation()
                         .description("AgroGes Wiki Documentation")
-                        .url("https://acme-learning-platform.wiki.github.io/docs"));
+                        .url("https://AgroGes.wiki.github.io/docs"));
+
         return openApi;
     }
 }
