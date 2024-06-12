@@ -6,9 +6,6 @@
       <entry path="C:\Users\lasto\IdeaProjects\Back-Endasd" />
     </classpathModifications>
     <option name="DEBUG_MODE" value="true" />
-    <option name="envFilePaths">
-      <option value="$PROJECT_DIR$/.env" />
-    </option>
     <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
     <module name="agroges" />
     <selectedOptions>
