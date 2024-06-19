@@ -19,12 +19,12 @@ import static org.springframework.http.HttpStatus.CREATED;
 
 @RestController
 @RequestMapping("/api/v1/farming/ruc")
-public class RucController {
+public class Farming {
 
     private final RucQueryService rucQueryService;
     private final RucCommandService rucCommandService;
 
-    public RucController(RucQueryService rucQueryService, RucCommandService rucCommandService) {
+    public Farming(RucQueryService rucQueryService, RucCommandService rucCommandService) {
         this.rucQueryService = rucQueryService;
         this.rucCommandService = rucCommandService;
     }
