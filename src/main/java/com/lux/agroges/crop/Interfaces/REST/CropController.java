@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="api/v1/crops",produces = MediaType.APPLICATION_JSON_VALUE)
-@Tag(name="Crops",description = "Crop endpoints")
+@RequestMapping(value="api/v1/crop",produces = MediaType.APPLICATION_JSON_VALUE)
+@Tag(name="Crop",description = "Crop endpoints")
 public class CropController {
     private final CropCommandService cropCommandService;
     private final CropQueryService cropQueryService;
@@ -49,7 +49,7 @@ public class CropController {
         return ResponseEntity.ok(cropResources);
     }
 
-    @GetMapping("/{cropId}")
+    @GetMapping("/{crop-Id}")
     public ResponseEntity<CropResource> getCropById(@PathVariable Long cropId){
         var getCropQuery= new GetCropByIdQuery(cropId);
         var crop=cropQueryService.handle(getCropQuery);
@@ -59,7 +59,7 @@ public class CropController {
         var cropResource= CropFromEntityAssembler.toResourceFromEntity(crop.get());
         return ResponseEntity.ok(cropResource);
     }
-    @PutMapping("/{cropId}")
+    @PutMapping("/{crop-Id}")
     public ResponseEntity<CropResource> updateCrop(@PathVariable Long cropId,@RequestBody UpdateCropResource resource){
         var UpdateCrop=UpdateCropCommandFromResourceAssembler.toCommandFromResource(cropId,resource);
         var crop=cropCommandService.handle(UpdateCrop);
@@ -69,14 +69,14 @@ public class CropController {
         var cropResource= CropFromEntityAssembler.toResourceFromEntity(crop.get());
         return ResponseEntity.ok(cropResource);
     }
-    @DeleteMapping ("/{cropId}")
+    @DeleteMapping ("/{crop-Id}")
     public ResponseEntity<?>deleteCrop(@PathVariable Long cropId){
         var deleteCropCommand= new DeleteCropCommand(cropId);
         cropCommandService.handle(deleteCropCommand);
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping("/{cropId}/products/{productId}")
+    @PutMapping("/{cropId}/products/{product-Id}")
     public ResponseEntity<CropItemResource>addProductToCrop(@PathVariable Long productId,@PathVariable Long cropId){
         cropCommandService.handle(new AddProductToCropCommand(cropId,productId));
         var cropByIdQuery= new GetCropItemsByCropId(cropId);
