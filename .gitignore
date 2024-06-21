@@ -1,0 +1,5 @@
+target/
+.settings/
+.mvn/
+# Ignore build artifacts
+/target/
