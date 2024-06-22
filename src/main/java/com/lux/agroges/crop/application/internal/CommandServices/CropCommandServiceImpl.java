@@ -6,7 +6,6 @@ import com.lux.agroges.crop.Domain.Model.commands.CreateCropCommand;
 
 import com.lux.agroges.crop.Domain.Model.commands.DeleteCropCommand;
 import com.lux.agroges.crop.Domain.Model.commands.UpdateCropCommand;
-import com.lux.agroges.crop.Domain.Model.valueobjects.CropId;
 import com.lux.agroges.crop.Domain.services.CropCommandService;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -16,71 +15,48 @@ import java.util.Optional;
 
 @Service
 public class CropCommandServiceImpl implements CropCommandService {
-    private final CropRepository cropRepository;
-    private final ProductRepository productRepository;
 
-    public CropCommandServiceImpl(CropRepository cropRepository, ProductRepository productRepository) {
+    private final CropRepository cropRepository;
+
+    public CropCommandServiceImpl(CropRepository cropRepository) {
         this.cropRepository = cropRepository;
-        this.productRepository = productRepository;
     }
-    @Override
+
     @Transactional
     public Optional<Crop> handle(CreateCropCommand command) {
-        if (cropRepository.existsByCropId(new CropId(command.cropId()))) {
-            throw new IllegalArgumentException("Crop already exists");
-
-        }
-        var crop = new Crop(command.cropId(), command.cropCode(), command.value(), command.currency());
         try {
+            if (cropRepository.existsById(command.id())) {
+                throw new IllegalArgumentException("Crop with this ID already exists");
+            }
+
+            var crop = new Crop(command.cropCode(), command.value(), command.currency());
             crop = cropRepository.save(crop);
+            return Optional.of(crop);
+
         } catch (Exception e) {
-            throw new IllegalArgumentException("Error creating crop");
+            throw new IllegalArgumentException("Error creating crop: " + e.getMessage(), e);
         }
-        return Optional.of(crop);
-
-
     }
 
     @Override
-    @Transactional
-    public Optional<Crop> handle(UpdateCropCommand command){
-        var updt = cropRepository.findById(command.cropId());
-        if(updt.isEmpty())
+    public Optional<Crop> handle(UpdateCropCommand command) {
+        return Optional.empty();
+    }
+
+    @Override
+    public void handle(DeleteCropCommand command) {
+        if(!cropRepository.existsById(command.id())){
             throw new IllegalArgumentException("Crop not found");
-        var cropUpdate=updt.get();
-        try{
-            var cropUpdated = cropRepository
-                    .save(cropUpdate.updateCrop(command.cropId(),command.cropCode(),command.currency(),command.value()));
-            return Optional.of(cropUpdated);
-        }catch (Exception e){
-            throw new IllegalArgumentException("Error updating crop");
+        }
+        try {cropRepository.deleteById(command.id());}
+
+        catch (Exception e) {
+            throw new IllegalArgumentException("Error deleting crop: " + e.getMessage(), e);
         }
     }
 
     @Override
-    public void handle(DeleteCropCommand command){
-        Crop crop= cropRepository.findById(command.cropId()).
-                orElseThrow(()->new IllegalArgumentException("Crop not Found"));
-        cropRepository.delete(crop);
+    public void handle(AddProductToCropCommand command) {
+
     }
-
-    @Override
-    public void handle(AddProductToCropCommand command){
-        var cropOptional= cropRepository.findById(command.cropId());
-        var productOptional= productRepository.findById(command.productId());
-        if(cropOptional.isEmpty() || productOptional.isEmpty()){
-            throw new IllegalArgumentException("Crop or Product not found");
-        }
-        try {
-            var crop=cropOptional.get();
-            var product=productOptional.get();
-            crop.addCropItem(product);
-            crop.getLastCropItem().updateNextItem(null);
-            cropRepository.save(crop);
-        }catch (Exception e){
-            throw new IllegalArgumentException("Error adding product to crop");
-        }
-    }
-
-
 }

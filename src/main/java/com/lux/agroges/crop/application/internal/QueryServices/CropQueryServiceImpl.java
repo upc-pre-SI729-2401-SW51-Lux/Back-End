@@ -32,7 +32,7 @@ public class CropQueryServiceImpl implements CropQueryService {
 
     @Override
     public List<CropItem>handle(GetCropItemsByCropId query){
-        return cropRepository.findById(query.cropId()).map(Crop::getCropItems).orElse(null);
+        return cropRepository.findById(query.id()).map(Crop::getCropItems).orElse(null);
 
     }
 

@@ -8,5 +8,5 @@ import com.lux.agroges.crop.Domain.Model.valueobjects.*;
 @Repository
 public interface CropRepository extends JpaRepository<Crop, Long> {
 
-    boolean existsByCropId(CropId cropId);
+    boolean existsById(Long id);
 }

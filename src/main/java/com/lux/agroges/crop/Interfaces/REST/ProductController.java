@@ -11,14 +11,15 @@ import com.lux.agroges.crop.Interfaces.REST.Transform.ProductFromEntityToAssembl
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping
-@Tag(name="CropProducts",description = "Crop Products management endpoints")
+@RequestMapping(value="api/v1/product",produces = MediaType.APPLICATION_JSON_VALUE)
+@Tag(name="product",description = "Product management endpoints")
 public class ProductController {
     private final ProductCommandService productCommandService;
     private final ProductQueryService productQueryService;

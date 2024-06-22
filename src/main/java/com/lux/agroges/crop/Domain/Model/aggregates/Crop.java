@@ -1,34 +1,20 @@
 package com.lux.agroges.crop.Domain.Model.aggregates;
+import com.lux.agroges.crop.Domain.Model.commands.CreateProductCommand;
 import com.lux.agroges.crop.Domain.Model.entities.CropItem;
 import com.lux.agroges.crop.Domain.Model.valueobjects.*;
-import com.lux.agroges.shared.domain.Model.aggregates.AuditableAbstractAggregateRoot;
-
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
-import jakarta.persistence.AttributeOverrides;
-import jakarta.persistence.Column;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.*;
 import lombok.Getter;
-import jakarta.persistence.OneToMany;
-
 import java.util.ArrayList;
 import java.util.List;
 
 
 @Getter
 @Entity
-public class Crop extends AuditableAbstractAggregateRoot<Crop> {
-
-    @Embedded
-    @AttributeOverrides(
-        {
-            @AttributeOverride(name = "cropId", column = @Column(name = "crop_id"))
-
-        }
-
-    )
-    private CropId cropId;
+public class Crop{
+    @Getter
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
 
     @Embedded
@@ -52,19 +38,19 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
 
 
 
+
     @OneToMany(mappedBy= "crop",cascade = CascadeType.ALL)
     private List<CropItem> cropItems;
     public Crop(){
-        this.cropId=new CropId(0L);
         this.cropCost=new CropCost("USD",0L);
         this.cropCode=new CropCode("A");
         this.cropItems = new ArrayList<>();
 
     }
 
-    public Crop(Long cropId, String currency, Long amount, String cropCode){
+    public Crop(String currency, Long amount, String cropCode){
         this();
-        this.cropId=new CropId(cropId);
+
         this.cropCost= new CropCost(currency,amount);
         this.cropCode= new CropCode(cropCode);
         this.cropItems = new ArrayList<>();
@@ -120,7 +106,7 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
 
 
     public Crop updateCrop(Long id,String code,String currency,Long value){
-        this.cropId=new CropId(id);
+
         this.cropCode=new CropCode(code);
         this.cropCost= new CropCost(currency,value);
         return this;
@@ -129,4 +115,12 @@ public class Crop extends AuditableAbstractAggregateRoot<Crop> {
     public boolean emptyCrop(){
         return cropItems.isEmpty();
     }
+
+    public void addProductToCrop(CreateProductCommand createProductCommand){
+        System.out.println("Adding product to crop");
+        Product product = new Product(createProductCommand);
+        addCropItem(product);
+        }
 }
+
+
