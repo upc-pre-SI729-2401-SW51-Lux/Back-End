@@ -19,7 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value="api/v1/product",produces = MediaType.APPLICATION_JSON_VALUE)
-@Tag(name="product",description = "Product management endpoints")
+@Tag(name="Product",description = "Product management endpoints")
 public class ProductController {
     private final ProductCommandService productCommandService;
     private final ProductQueryService productQueryService;

@@ -115,7 +115,6 @@ public class Crop{
     public boolean emptyCrop(){
         return cropItems.isEmpty();
     }
-
     public void addProductToCrop(CreateProductCommand createProductCommand){
         System.out.println("Adding product to crop");
         Product product = new Product(createProductCommand);

@@ -1,11 +1,8 @@
 package com.lux.agroges.crop.application.internal.CommandServices;
 
 import com.lux.agroges.crop.Domain.Model.aggregates.Crop;
-import com.lux.agroges.crop.Domain.Model.commands.AddProductToCropCommand;
-import com.lux.agroges.crop.Domain.Model.commands.CreateCropCommand;
+import com.lux.agroges.crop.Domain.Model.commands.*;
 
-import com.lux.agroges.crop.Domain.Model.commands.DeleteCropCommand;
-import com.lux.agroges.crop.Domain.Model.commands.UpdateCropCommand;
 import com.lux.agroges.crop.Domain.services.CropCommandService;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -56,7 +53,6 @@ public class CropCommandServiceImpl implements CropCommandService {
     }
 
     @Override
-    public void handle(AddProductToCropCommand command) {
+    public void handle(AddProductToCropCommand command) {}
 
-    }
 }
